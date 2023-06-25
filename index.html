@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<title>Super Compras</title>
+</head>
+<body id="theme" data-bs-theme="">
+<!-- navbar -->
+<section>
+	<nav class="navbar navbar-expand-md border container-fluid">
+			<a class="navbar-brand" href="#inicio">
+			<img src="./img/logo.svg" height="35">
+			<span class="title">Super Compras</span></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse ms-3" id="navmenu">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active-now" href="#">Início</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link activeP" href="#restaurantes">Restaurantes</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link activeP" href="#bebidas">Bebidas</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link activeP" href="#mercado">Mercado</a>
+					</li>
+				</ul>
+<!-- search bar -->
+			<div class="input-group d-flex justify-content-between nav-item mt-3 mb-3">
+				<span class="input-group-text bi bi-search searchP ms-3" id="basic-addon1"></span>
+				<input type="text" class="form-control focus-ring me-3" placeholder="Busque items ou lojas" aria-label="Username" aria-describedby="basic-addon1" style="--bs-focus-ring-color: rgba(94, 23, 235, 0.50)">
+			</div>
+<!-- iteractive icons -->
+			<ul class="list-group list-group-horizontal me-2">
+				<li class="list-group-item float-start">
+					<i id="toggle-btn" role="button" class="bi bi-brightness-high-fill icon-size" onclick="setIcon()"></i>
+				</li>
+				<li class="list-group-item float-start">
+					<i role="button" class="bi bi-person-fill icon-size mt-1"></i>
+			</li>
+				<li class="list-group-item icon-size">
+					<i role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="bi bi-cart4 bag"></i>
+				</li>
+			</ul>
+		</nav>
+</div>
+<!-- cart offcanvas -->
+<div class="container-fluid">
+	<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="offcanvasRightLabel">Carrinho de compras</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+		<div class="offcanvas-body">
+			...
+		</div>
+	</div>
+</div>
+</section>
+<!-- promotion rows -->
+<section>
+	<!-- dropdown cards -->
+<div class="container-fluid bg-purple d-flex justify-content-center p-2">
+	<img src="./img/coupom.svg" class="me-4" height="35">
+	<h6 class="header-text mt-2">
+		Você tem 3 cupons! Aproveite seus descontos
+	</h6>
+	<div id="toggler-canvas" class="icon-toggler ms-4 text-center">
+		<i id="icon-offcanvas" role="button" class="bi bi-chevron-down" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-coupom" data-bs-dismiss="offcanvas-coupom"
+		aria-controls="offcanvas-coupom" onclick="iconCanvasToggler()">
+		</i>
+	</div>
+</div>
+<div class="offcanvas offcanvas-bottom h-auto pb-5" data-bs-scroll="true" tabindex="-1" id="offcanvas-coupom" aria-labelledby="offcanvas-coupomLabel">
+  <div class="offcanvas-header">
+  <div class="offcanvas-body">
+    <div class="row container-fluid d-md-flex justify-content-center">
+			<div class="col-md card-body-w">
+				<div class="card">
+					<div class="card-body">
+						<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
+						<p class="card-text text-start fs-6">Válido para o primeiro pedido em Bebidas acima de R$50</p>
+							<a role="button" href="#" class="container-fluid btn-outline-purple fw-semibold">Ver lojas</a>
+						<div class="row mt-2">
+							<p class="col text-start text-purple fw-semibold pointer">Ver regras</p>
+							<p class="col text-end card-footer-valid">Válido até 23/06</p>
+						</div>
+					</div>
+					<div class="card-footer text-center">
+						<h6 class="card-footer-text">
+							O cupom será aplicado no pagamento
+						</h6>
+					</div>
+				</div>
+			</div>
+			<div class="col-md card-body-w">
+				<div class="card">
+					<div class="card-body">
+						<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
+						<p class="card-text text-start fs-6">Válido para o primeiro pedido em Bebidas acima de R$50</p>
+							<a role="button" href="#" class="container-fluid btn-outline-purple fw-semibold">Ver lojas</a>
+						<div class="row mt-2">
+							<p class="col text-start text-purple fw-semibold pointer">Ver regras</p>
+							<p class="col text-end card-footer-valid">Válido até 23/06</p>
+						</div>
+					</div>
+					<div class="card-footer text-center">
+						<h6 class="card-footer-text">
+							O cupom será aplicado no pagamento
+						</h6>
+					</div>
+				</div>
+			</div>
+			<div class="col-md card-body-w">
+				<div class="card">
+					<div class="card-body">
+						<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
+						<p class="card-text text-start fs-6">Válido para o primeiro pedido em Bebidas acima de R$50</p>
+							<a role="button" href="#" class="container-fluid btn-outline-purple fw-semibold">Ver lojas</a>
+						<div class="row mt-2">
+							<p class="col text-start text-purple fw-semibold pointer">Ver regras</p>
+							<p class="col text-end card-footer-valid">Válido até 23/06</p>
+						</div>
+					</div>
+					<div class="card-footer text-center">
+						<h6 class="card-footer-text">
+							O cupom será aplicado no pagamento
+						</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+</div>
+</section>
+<section>
+
+</section>
+<!-- carousel multiple items -->
+<section>
+	<div id="carouselExample" class="carousel container-fluid mt-3">
+		<div class="carousel-inner">
+			<div class="carousel-item active carousel-img ms-3">
+				<img src="./img/marcas-famosas.svg" class="d-block w-100 img-wrapper">
+			</div>
+			<div class="carousel-item carousel-img">
+				<img src="./img/comida-japonesa.svg" class="d-block w-100 img-wrapper">
+			</div>
+			<div class="carousel-item carousel-img">
+				<img src="./img/entrega-gratis.svg" class="d-block w-100 img-wrapper">
+			</div>
+			<div class="carousel-item carousel-img me-3">
+				<img src="./img/refri.svg" class="d-block w-100 img-wrapper">
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+</section>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
+</body>
+</html>

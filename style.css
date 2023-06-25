@@ -55,6 +55,10 @@
 	/* color: #222fe6; */
 	color: #ffffff;
 }
+.border-img {
+	border-radius: 15%;
+	margin: 0;
+}
 @media (min-width: 640px) {
   .backdrop {
     display: none!important;
@@ -96,6 +100,33 @@
 	margin-top: 15px;
 	min-width: 230px;
 	max-width: 300px;
+}
+.store-body-w {
+	margin-top: 15px;
+	max-width: 360px;
+	min-width: 340px;
+}
+.content-w {
+	min-width: 200px;
+	max-width: 250px;
+}
+.rating {
+	color: #f49f0a;
+}
+.store-text, .store-text-color {
+	font-size: 14px;
+}
+.store-text-color {
+	color: #61615c;
+}
+.border-store {
+	border-radius: 10px;
+	transition: 0.35s all ease;
+}
+.border-store:hover {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	/* border: 1px solid #c2c2c0;
+	border-radius: 10px; */
 }
 @media screen and (min-width:640px) {
 	.carousel-inner {

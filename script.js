@@ -4,6 +4,7 @@ let themeChanger = document.getElementById('theme');
 let buttonPurple = document.querySelectorAll('.btn-outline-purple');
 console.log(buttonPurple[0]);
 let textPurple = document.querySelectorAll('.text-purple');
+let storeText = document.querySelectorAll('.store-text');
 
 const buttonOutlineToggler = function (event) {
 	if(event === 'light'){
@@ -12,6 +13,7 @@ const buttonOutlineToggler = function (event) {
 			buttonPurple[i].classList.replace( 'btn-outline-light', 'btn-outline-purple');
 			textPurple[i].classList.replace('text-light', 'text-purple');
 		}
+		storeText.forEach(element => element.classList.add('store-text-color'))
 	}
 	else if(event === 'dark'){
 		for(let i = 0; i < 3; i++){
@@ -19,6 +21,7 @@ const buttonOutlineToggler = function (event) {
 			buttonPurple[i].classList.replace( 'btn-outline-purple', 'btn-outline-light');
 			textPurple[i].classList.replace('text-purple', 'text-light')
 		}
+		storeText.forEach(element => element.classList.remove('store-text-color'))
 	}
 };
 const setIcon = function () {

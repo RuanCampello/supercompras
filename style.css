@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
+section{
+	overflow: hidden;
+}
 .bg-orange {
 	background-color: #e7380f;
 }
@@ -96,20 +99,7 @@
 .card-footer-text {
 	font-size: 12px;
 }
-.card-body-w {
-	margin-top: 15px;
-	min-width: 230px;
-	max-width: 300px;
-}
-.store-body-w {
-	margin-top: 15px;
-	max-width: 360px;
-	min-width: 340px;
-}
-.content-w {
-	min-width: 200px;
-	max-width: 250px;
-}
+
 .rating {
 	color: #f49f0a;
 }
@@ -128,6 +118,11 @@
 	/* border: 1px solid #c2c2c0;
 	border-radius: 10px; */
 }
+.col-auto {
+	margin: 0;
+	padding: 0;
+}
+/* carousel responsive */
 @media screen and (min-width:640px) {
 	.carousel-inner {
 		display: flex;
@@ -146,6 +141,38 @@
 		display: block;
 		margin-right: 1%;
 		flex: 0 0 calc(100%/3);
+	}
+}
+/* resposive stores */
+@media screen and (max-width: 710px){
+	a.nav-link {
+		display: block;
+	}
+	.store-body-w {
+		width: 90%;
+		padding: 0 0 0 15px;
+	}
+}
+@media screen and (min-width: 655px) {
+	.store-body-w {
+		margin-top: 15px;
+		max-width: 360px;
+		min-width: 340px;
+	}
+	.content-w {
+		min-width: 200px;
+		max-width: 205px;
+		margin-right: 0;
+		padding-right: 0;
+	}
+}
+@media screen and (min-width: 770px) {
+	.card-body-w {
+		margin-top: 15px;
+		min-width: 230px;
+		max-width: 300px;
+		margin-right: 0;
+		padding-right: 0;
 	}
 }
 .carousel-img {

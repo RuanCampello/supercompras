@@ -160,7 +160,8 @@ section{
 		margin-top: 25%;
 	}
 	#img-coupom {
-		margin-top: 3%;
+		display: block;
+		margin: auto;
 	}
 	.header-text {
 		font-size: 15px;

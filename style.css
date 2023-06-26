@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
+
 section{
 	overflow: hidden;
 }
@@ -114,8 +115,9 @@ section{
 	color: #61615c;
 }
 .border-store {
+	border: 1px solid rgba(100, 100, 111, 0.2);
 	border-radius: 10px;
-	transition: 0.35s all ease;
+	transition: 0.3s all ease-in;
 }
 .border-store:hover {
 	box-shadow: rgba(100, 100, 111, 0.2) 2px 5px 10px 2px;
@@ -148,13 +150,9 @@ section{
 	}
 }
 /* resposive stores */
-@media screen and (max-width: 710px){
+@media screen and (max-width: 880px){
 	a.nav-link {
 		display: block;
-	}
-	.store-body-w {
-		width: 90%;
-		padding: 0 0 0 15px;
 	}
 	.icon-toggler {
 		margin-top: 25%;
@@ -167,24 +165,34 @@ section{
 		font-size: 15px;
 	}
 }
-@media screen and (min-width: 655px) {
+@media screen and (max-width: 770px){
 	.store-body-w {
-		margin-top: 15px;
-		max-width: 360px;
-		min-width: 340px;
-	}
-	.content-w {
-		min-width: 200px;
-		max-width: 205px;
-		margin-right: 0;
-		padding-right: 0;
+	width: 90%;
+	padding: 0 0 0 15px;
 	}
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 770px){
+	.store-body-w {
+		width: 45%;
+		padding: 0 0 0 15px;
+	}
+}
+@media screen and (min-width: 1340px) {
 	.card-body-w {
 		margin-top: 15px;
 		min-width: 230px;
 		max-width: 300px;
+		margin-right: 0;
+		padding-right: 0;
+	}
+	.store-body-w {
+		margin-top: 15px;
+		max-width: 420px;
+		min-width: 390px;
+	}
+	.content-w {
+		min-width: 230px;
+		max-width: 260px;
 		margin-right: 0;
 		padding-right: 0;
 	}

@@ -53,14 +53,6 @@ section{
 	align-items: center;
 	padding: 5px;
 }
-/* #img-coupom {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-} */
-#toggler-canvas {
-	width: 40px;
-}
 .icon-toggler:hover {
 	background-color: rgba(255, 255, 255, 0.25);
 	/* color: #222fe6; */

@@ -69,22 +69,22 @@
 <!-- promotion rows -->
 <section>
 	<!-- dropdown cards -->
-<div class="container-fluid bg-purple d-flex justify-content-center p-2">
+<div class="container-fluid bg-purple d-flex justify-content-center align-items-center p-2">
 	<img id="img-coupom" src="./img/coupom.svg" height="35">
 	<h6 class="header-text mt-2 mx-4">
 		Você tem 3 cupons! Aproveite seus descontos
 	</h6>
-	<div id="toggler-canvas" class="">
+	<div>
 		<i id="icon-offcanvas" role="button" class="bi bi-chevron-down icon-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-coupom" data-bs-dismiss="offcanvas-coupom"
 		aria-controls="offcanvas-coupom" onclick="iconCanvasToggler()">
 		</i>
 	</div>
 </div>
-<div class="offcanvas offcanvas-w offcanvas-bottom h-auto pb-5" data-bs-scroll="true" tabindex="-1" id="offcanvas-coupom" aria-labelledby="offcanvas-coupomLabel">
+<div class="offcanvas offcanvas-w offcanvas-bottom h-50 pb-5" data-bs-scroll="false" tabindex="-1" id="offcanvas-coupom" aria-labelledby="offcanvas-coupomLabel">
   <div class="offcanvas-header">
   <div class="offcanvas-body">
     <div class="row container-fluid d-md-flex justify-content-center">
-			<div class="col-md card-body-w">
+			<div class="col-md card-body-w mb-3">
 				<div class="card">
 					<div class="card-body">
 						<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
@@ -102,7 +102,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md card-body-w">
+			<div class="col-md card-body-w mb-3">
 				<div class="card">
 					<div class="card-body">
 						<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
@@ -120,7 +120,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md card-body-w">
+			<div class="col-md card-body-w mb-3">
 				<div class="card">
 					<div class="card-body">
 						<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
@@ -174,7 +174,7 @@
 <!-- stores -->
 <section class="mx-3">
 	<div class="row">
-		<h5 class="ms-3 mt-3">Lojas</h5>
+		<h4 class="ms-3 mt-3">Lojas</h4>
 		<div class="container-fluid row m-3 me-0 store-body-w border-store">
 				<div class="col-auto">
 					<img src="./img/home-burguer.svg" width="110" class="border-img my-3">

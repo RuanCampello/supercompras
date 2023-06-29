@@ -7,15 +7,9 @@ section{
 	background-color: #e7380f;
 }
 .bg-purple, .btn-purple {
-	background-color: #5e17eb
+	background-color: #5e17eb;
 }
-.active-now, .active-now:hover, .title, .text-purple {
-	color: #5e17eb;
-}
-.active-now{
-	color: #5e17eb;
-}
-.activeP:hover {
+.active-now, .active-now:hover, .title, .text-purple, .activeP:hover{
 	color: #5e17eb;
 }
 .activeP::after {
@@ -90,7 +84,7 @@ section{
 }
 .btn-outline-purple:hover, .btn-outline-purple:active {
 	background-color: #5e17eb;
-	-webkit-text-fill-color: aliceblue;
+	-webkit-text-fill-color: #ffffff;
 }
 .card-footer-valid, .card-footer-text {
 	color: rgb(112, 112, 112);
@@ -207,4 +201,30 @@ section{
 .img-wrapper {
   padding: 1%;
 	border-radius: 17px;
+	z-index: 1;
+}
+.carousel-inner{
+	padding: 1em;
+}
+.card{
+	margin: 0 .5em;
+	box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+	border: none;
+}
+.carousel-light{
+	background-color: #575757;
+	width: 6vh;
+	height: 6vh;
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.carousel-dark {
+	background-color: #cacaca;
+	filter: invert(1);
+	width: 6vh;
+	height: 6vh;
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-50%);
 }

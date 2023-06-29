@@ -12,7 +12,7 @@
 <body id="theme" data-bs-theme="">
 <!-- navbar -->
 <section>
-	<nav class="navbar navbar-expand-md border container-fluid">
+	<nav id="nav" class="navbar navbar-expand-md border container-fluid navbar-top bg-light">
 			<a class="navbar-brand" href="#inicio">
 			<img src="./img/logo.svg" height="35">
 			<span class="title">Super Compras</span></a>
@@ -86,7 +86,7 @@
     <div class="row container-fluid d-md-flex justify-content-center">
 			<div class="col-md card-body-w mb-3">
 				<div class="card">
-					<div class="card-body">
+					<div class="card-body border">
 						<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
 						<p class="card-text text-start fs-6">Válido para o primeiro pedido em Bebidas acima de R$50</p>
 							<a role="button" href="#" class="container-fluid btn-outline-purple fw-semibold">Ver lojas</a>
@@ -146,7 +146,7 @@
 </section>
 <!-- carousel multiple items -->
 <section>
-	<div id="carouselExample" class="carousel container-fluid mt-3">
+	<div id="carouselExample" class="carousel container-fluid">
 		<div class="carousel-inner">
 			<div class="carousel-item active carousel-img ms-3">
 				<img src="./img/marcas-famosas.svg" class="d-block w-100 img-wrapper">
@@ -161,13 +161,11 @@
 				<img src="./img/refris.svg" class="d-block w-100 img-wrapper">
 			</div>
 		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+		<button class="carousel-control-prev carousel-light" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
 		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+		<button class="carousel-control-next carousel-light" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
 		</button>
 	</div>
 </section>

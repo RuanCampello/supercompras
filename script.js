@@ -5,6 +5,8 @@ let buttonPurple = document.querySelectorAll('.btn-outline-purple');
 console.log(buttonPurple[0]);
 let textPurple = document.querySelectorAll('.text-purple');
 let storeText = document.querySelectorAll('.store-text');
+let carouselBtn = document.querySelectorAll('.carousel-light');
+let nav = document.getElementById('nav');
 
 const buttonOutlineToggler = function (event) {
 	if(event === 'light'){
@@ -13,7 +15,9 @@ const buttonOutlineToggler = function (event) {
 			buttonPurple[i].classList.replace( 'btn-outline-light', 'btn-outline-purple');
 			textPurple[i].classList.replace('text-light', 'text-purple');
 		}
-		storeText.forEach(element => element.classList.add('store-text-color'))
+		storeText.forEach(element => element.classList.add('store-text-color'));
+		carouselBtn.forEach(element => element.classList.replace('carousel-dark', 'carousel-light'));
+		nav.classList.replace('bg-dark', 'bg-light');
 	}
 	else if(event === 'dark'){
 		for(let i = 0; i < 3; i++){
@@ -22,6 +26,8 @@ const buttonOutlineToggler = function (event) {
 			textPurple[i].classList.replace('text-purple', 'text-light')
 		}
 		storeText.forEach(element => element.classList.remove('store-text-color'))
+		carouselBtn.forEach(element => element.classList.replace('carousel-light', 'carousel-dark'));
+		nav.classList.replace('bg-light', 'bg-dark');
 	}
 };
 const setIcon = function () {
@@ -59,4 +65,19 @@ $('#carouselExample .carousel-control-prev').on('click', function(){
 		scrollPosition -= imgWidth;
 		$('.carousel-inner').animate({scrollLeft: scrollPosition, behavior: 'smooth'});
 	}
+});
+
+document.addEventListener("DOMContentLoaded", function(){
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        document.querySelectorAll('.navbar-top').forEach(element => element.classList.add('fixed-top'));
+        // add padding top to show content behind navbar
+        let navbar_height = document.querySelector('.navbar').offsetHeight;
+        document.body.style.paddingTop = navbar_height + 'px';
+      } else {
+        document.querySelectorAll('.navbar-top').forEach(element => element.classList.remove('fixed-top'));
+         // remove padding top from body
+        document.body.style.paddingTop = '0';
+      } 
+  });
 });

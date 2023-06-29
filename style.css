@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
-
 section{
 	overflow: hidden;
 }
-/* .activeP::after {
+.nav-link::after {
 	margin-top: 4px;
   content: "";
 	position: relative;
@@ -12,52 +11,14 @@ section{
   display: block;
   transition: all 0.5s ease;
 }
-.activeP:hover::after {
+.nav-link:hover::after {
 	width: 100%;
   height: 2px;
   background-color: #5e17eb;
-} */
-.icon-toggler:hover {
-	background-color: rgba(255, 255, 255, 0.25);
-	/* color: #222fe6; */
-	color: #ffffff;
-	border-radius: 50%;
 }
-.border-img {
-	border-radius: 15%;
-	margin: 0;
-}
-.header-text {
-	color: #ffffff;
-	font-size: 1.125rem;
-	font-weight: 300;
-	font-family: 'Arimo', sans-serif;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.btn-canva {
-	border-radius: 50%;
-}
-.btn-canva:hover {
-	background-color: rgba(255, 255, 255, 0.4);
-}
-.nav-left {
-	width: fit-content;
-	margin-left: 10px;
-}
-.nav-link {
-	padding-bottom: 2px;
-}
-.border-store {
-	border: 1px solid rgba(100, 100, 111, 0.2);
-	border-radius: 10px;
-	transition: 0.3s all ease-in;
-}
-.border-store:hover {
+.border-gray-store:hover {
+	transition: 0.4s all ease-in-out;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-	/* border: 1px solid #c2c2c0;
-	border-radius: 10px; */
 }
 .col-auto {
 	margin: 0;
@@ -88,9 +49,6 @@ section{
 @media screen and (max-width: 880px){
 	a.nav-link {
 		display: block;
-	}
-	.header-text {
-		font-size: 15px;
 	}
 }
 @media screen and (max-width: 770px){
@@ -148,9 +106,7 @@ section{
 	padding: 1em;
 }
 .card{
-	margin: 0 .5em;
 	box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-	border: none;
 }
 .carousel-light{
 	background-color: #575757;

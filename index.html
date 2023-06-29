@@ -12,48 +12,33 @@
 <body id="theme" data-bs-theme="">
 <!-- navbar -->
 <section>
-	<nav id="nav" class="navbar navbar-expand-md container-fluid navbar-top bg-light">
-			<a class="navbar-brand" href="#">
-			<img class="ms-3" src="./img/logo.svg" height="35">
-			<span class="fw-bolder">Super Compras</span></a>
-			<button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse ms-3" id="navmenu">
-				<ul class="navbar-nav list-group list-group-horizontal">
-					<li class="nav-item">
-						<a class="nav-link active nav-left" href="#">Início</a>
-					</li>
-					<li class="nav-item nav-left">
-						<a class="nav-link" href="#restaurantes">Restaurantes</a>
-					</li>
-					<li class="nav-item nav-left">
-						<a class="nav-link" href="#bebidas">Bebidas</a>
-					</li>
-					<li class="nav-item nav-left">
-						<a class="nav-link" href="#mercado">Mercado</a>
-					</li>
+ <nav id="nav" class="navbar d-none d-lg-flex align-items-center navbar-top bg-light">
+	<div class="container-fluid">
+		<header class="mt-2">
+			<a href="#" class="navbar-brand float-start">
+				<img src="/img/logo.svg" width="35">
+				<span class="fw-bolder">
+					S<span class="text-purple">upe</span>r Compras
+				 </span>
+			 </a>
+			 <ul class="navbar-nav list-group list-group-horizontal">
+				 <li class="nav-item me-3"><a href="#inicio" class="nav-link active">Início</a></li>
+				 <li class="nav-item me-3"><a href="#restaurantes" class="nav-link">Restaurantes</a></li>
+				 <li class="nav-item me-3"><a href="#" class="nav-link">Bebidas</a></li>
+				 <li class="nav-item me-3"><a href="#" class="nav-link">Mercado</a></li>
+			 </ul>
+		</header>
+			<form role="search" class="input-group d-lg-flex" style="max-width: 35%;">
+				<span class="input-group-text bi bi-search text-white bg-purple fs-5"></span>
+				<input type="text" class="form-control focus-ring focus-ring-purple" placeholder="Busque por item ou loja">
+			</form>
+				<ul class="justify-content-end list-group list-group-horizontal">
+					<li class="list-group-item"><i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-4" onclick="setIcon()"></i></li>
+					<li class="list-group-item"><i role="button" class="bi bi-person-fill fs-4 mt-1"></i></li>
+					<li class="list-group-item"><i role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="bi bi-cart4 bag fs-4"></i></li>
 				</ul>
-			</div>
-<!-- search bar -->
-			<div class="input-group d-none d-lg-flex mt-2 mx-4">
-				<span class="input-group-text bi bi-search text-light bg-purple ms-3" id="basic-addon1"></span>
-				<input type="text" class="form-control focus-ring focus-ring-purple me-4" placeholder="Busque items ou lojas" aria-label="Username" aria-describedby="basic-addon1">
-			</div>
-<!-- iteractive icons -->
-			<ul class="list-group list-group-horizontal me-2 d-none d-md-flex">
-				<li class="list-group-item float-start">
-					<i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-4" onclick="setIcon()"></i>
-				</li>
-				<li class="list-group-item float-start">
-					<i role="button" class="bi bi-person-fill fs-4 mt-1"></i>
-			</li>
-				<li class="list-group-item fs-4">
-					<i role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="bi bi-cart4 bag"></i>
-				</li>
-			</ul>
-		</nav>
-</div>
+	</div>
+ </nav>
 <!-- cart offcanvas -->
 <div class="container-fluid">
 	<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -72,9 +57,9 @@
 	<!-- dropdown cards -->
 <div class="container-fluid bg-purple d-flex justify-content-center align-items-center p-2">
 	<img src="img/coupom.svg" height="35">
-	<h6 class="header-text mt-2 mx-4">
+	<h5 class="mt-2 mx-4 text-light fw-medium" style="font-family: 'Arimo', sans-serif;">
 		Você tem 3 cupons! Aproveite seus descontos
-	</h6>
+	</h5>
 	<div>
 		<i id="icon-offcanvas" role="button" class="bi bi-chevron-down text-orange fs-3 me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-coupom" data-bs-dismiss="offcanvas-coupom"
 		aria-controls="offcanvas-coupom" onclick="iconCanvasToggler()">
@@ -87,7 +72,7 @@
     <div class="row container-fluid d-md-flex justify-content-center">
 			<div class="col-md card-body-w mb-3">
 				<div class="card">
-					<div class="card-body bg-light">
+					<div class="card-body">
 						<div class="d-flex justify-content-start align-items-center">
 							<img src="img/coupom-outline.svg" height="55" class="mx-2">
 							<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
@@ -108,7 +93,7 @@
 			</div>
 			<div class="col-md card-body-w mb-3">
 				<div class="card">
-					<div class="card-body bg-light">
+					<div class="card-body">
 						<div class="d-flex justify-content-start align-items-center">
 							<img src="img/coupom-outline.svg" height="55" class="mx-2">
 							<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
@@ -129,7 +114,7 @@
 			</div>
 			<div class="col-md card-body-w mb-3">
 				<div class="card">
-					<div class="card-body bg-light">
+					<div class="card-body">
 						<div class="d-flex justify-content-start align-items-center">
 							<img src="img/coupom-outline.svg" height="55" class="mx-2">
 							<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
@@ -179,13 +164,13 @@
 </section>
 <!-- stores -->
 <section class="mx-3">
-	<div class="row">
-		<h4 class="ms-3 mt-3">Lojas</h4>
-		<div class="container-fluid row m-3 me-0 store-body-w border-store">
+	<div class="row" id="restaurantes">
+		<h4 class="ms-3 mt-3">Restaurantes</h4>
+		<div class="container-fluid row m-3 me-0 store-body-w border border-gray-store border-opacity-25 rounded">
 				<div class="col-auto">
-					<img src="./img/home-burguer.svg" width="110" class="border-img my-3">
+					<img src="./img/home-burguer.svg" width="110" class="rounded my-3">
 				</div>
-				<div class="content-w col container-fluid text-start mt-4">
+				<div class="content-w ms-2 col container-fluid text-start mt-4">
 					<div class="fs-6 text-start">
 						Handmade Burguer
 					</div>
@@ -208,11 +193,11 @@
 					</div>
 				</div>
 		</div>
-		<div class="row m-3 store-body-w border-store me-0 container-fluid">
+		<div class="row m-3 store-body-w border border-gray-store border-opacity-25 rounded me-0 container-fluid">
 			<div class="col-auto">
-				<img src="./img/american-fried-pastry.svg" width="110" class="border-img my-3">
+				<img src="./img/american-fried-pastry.svg" width="110" class="rounded my-3">
 			</div>
-			<div class="content-w col container-fluid text-start mt-4">
+			<div class="content-w ms-2 col container-fluid text-start mt-4">
 				<div class="fs-6 text-start">
 					American Fried Pastry
 				</div>
@@ -235,11 +220,11 @@
 				</div>
 			</div>
 	</div>
-	<div class="row m-3 store-body-w border-store me-0 container-fluid">
+	<div class="row m-3 store-body-w border border-gray-store border-opacity-25 rounded me-0 container-fluid">
 		<div class="col-auto">
-			<img src="./img/itadakimasu.svg" width="110" class="border-img my-3">
+			<img src="./img/itadakimasu.svg" width="110" class="rounded my-3">
 		</div>
-		<div class="content-w col container-fluid text-start mt-4">
+		<div class="content-w ms-2 col container-fluid text-start mt-4">
 			<div class="fs-6 text-start">
 				Itadakimasu
 			</div>
@@ -262,11 +247,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="row m-3 store-body-w border-store me-0 container-fluid">
+	<div class="row m-3 store-body-w border border-gray-store border-opacity-25 rounded me-0 container-fluid">
 		<div class="col-auto">
-			<img src="./img/acai-house.svg" width="110" class="border-img my-3">
+			<img src="./img/acai-house.svg" width="110" class="rounded my-3">
 		</div>
-		<div class="content-w col container-fluid text-start mt-4">
+		<div class="content-w ms-2 col container-fluid text-start mt-4">
 			<div class="fs-6 text-start">
 				Açai's House
 			</div>
@@ -289,11 +274,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="row m-3 store-body-w border-store me-0 container-fluid">
+	<div class="row m-3 store-body-w border border-gray-store border-opacity-25 rounded me-0 container-fluid">
 		<div class="col-auto">
-			<img src="./img/milk-shake.svg" width="110" class="border-img my-3">
+			<img src="./img/milk-shake.svg" width="110" class="rounded my-3">
 		</div>
-		<div class="content-w col container-fluid text-start mt-4">
+		<div class="content-w ms-2 col container-fluid text-start mt-4">
 			<div class="fs-6 text-start">
 				Milk Shaker
 			</div>
@@ -316,11 +301,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="row m-3 store-body-w border-store me-0 container-fluid">
+	<div class="row m-3 store-body-w border border-gray-store border-opacity-25 rounded me-0 container-fluid">
 		<div class="col-auto">
-			<img src="./img/chinatown.svg" width="110" class="border-img my-3">
+			<img src="./img/chinatown.svg" width="110" class="rounded my-3">
 		</div>
-		<div class="content-w col container-fluid text-start mt-4">
+		<div class="content-w ms-2 col container-fluid text-start mt-4">
 			<div class="fs-6 text-start">
 				China Town
 			</div>
@@ -343,11 +328,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="row m-3 store-body-w border-store me-0 container-fluid">
+	<div class="row m-3 store-body-w border border-gray-store border-opacity-25 rounded me-0 container-fluid">
 		<div class="col-auto">
-			<img src="./img/pizzeria-del-giorno.svg" width="110" class="border-img my-3">
+			<img src="./img/pizzeria-del-giorno.svg" width="110" class="rounded my-3">
 		</div>
-		<div class="content-w col container-fluid text-start mt-4">
+		<div class="content-w ms-2 col container-fluid text-start mt-4">
 			<div class="fs-6 text-start">
 				Pizzeria del Giorno
 			</div>

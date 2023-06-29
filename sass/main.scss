@@ -1,0 +1,39 @@
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+$custom-theme-colors: (
+  "purple": #5e17eb,
+  "orange": #e7380f,
+  "gray": #707070,
+  "gray-store": #61615c,
+  "yellow": #f49f0a,
+  "green": #50C878,
+
+);
+$custom-font-sizes: (
+  "store-size": 14px,
+  "footer": 12px,
+);
+
+$navbar-light-active-color: $purple;
+$input-focus-border-color: $purple;
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+$font-sizes: map-merge($custom-font-sizes, $font-sizes);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"
+
+//   .btn-outline-purple {
+// 	border: 1.5px solid #5e17eb;
+// 	border-radius: 5px;
+// 	-webkit-text-fill-color: #5e17eb;
+// 	cursor: pointer;
+// 	display: flex;
+// 	text-decoration: none;
+// 	justify-content: center;
+// 	padding: 6px;
+// }
+//  .btn-outline-purple:hover, .btn-outline-purple:active {
+// 	background-color: #5e17eb;
+// 	-webkit-text-fill-color: #ffffff;
+// }

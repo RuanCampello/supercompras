@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link href="./css/main.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 	<link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="style.css">
@@ -12,42 +12,42 @@
 <body id="theme" data-bs-theme="">
 <!-- navbar -->
 <section>
-	<nav id="nav" class="navbar navbar-expand-md border container-fluid navbar-top bg-light">
-			<a class="navbar-brand" href="#inicio">
+	<nav id="nav" class="navbar navbar-expand-md container-fluid navbar-top bg-light">
+			<a class="navbar-brand" href="#">
 			<img src="./img/logo.svg" height="35">
-			<span class="title">Super Compras</span></a>
+			<span class="fw-bolder">Super Compras</span></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse ms-3" id="navmenu">
 				<ul class="navbar-nav list-group list-group-horizontal">
 					<li class="nav-item">
-						<a class="nav-link active-now nav-left activeP" href="#">Início</a>
+						<a class="nav-link active nav-left" href="#">Início</a>
 					</li>
 					<li class="nav-item nav-left">
-						<a class="nav-link activeP" href="#restaurantes">Restaurantes</a>
+						<a class="nav-link" href="#restaurantes">Restaurantes</a>
 					</li>
 					<li class="nav-item nav-left">
-						<a class="nav-link activeP" href="#bebidas">Bebidas</a>
+						<a class="nav-link" href="#bebidas">Bebidas</a>
 					</li>
 					<li class="nav-item nav-left">
-						<a class="nav-link activeP" href="#mercado">Mercado</a>
+						<a class="nav-link" href="#mercado">Mercado</a>
 					</li>
 				</ul>
 <!-- search bar -->
 			<div class="input-group d-flex justify-content-between nav-item mt-3 mb-3">
-				<span class="input-group-text bi bi-search searchP ms-3" id="basic-addon1"></span>
-				<input type="text" class="form-control focus-ring me-3" placeholder="Busque items ou lojas" aria-label="Username" aria-describedby="basic-addon1" style="--bs-focus-ring-color: rgba(94, 23, 235, 0.50)">
+				<span class="input-group-text bi bi-search text-light bg-purple ms-3" id="basic-addon1"></span>
+				<input type="text" class="form-control focus-ring focus-ring-purple me-3" placeholder="Busque items ou lojas" aria-label="Username" aria-describedby="basic-addon1">
 			</div>
 <!-- iteractive icons -->
 			<ul class="list-group list-group-horizontal me-2">
 				<li class="list-group-item float-start">
-					<i id="toggle-btn" role="button" class="bi bi-brightness-high-fill icon-size" onclick="setIcon()"></i>
+					<i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-4" onclick="setIcon()"></i>
 				</li>
 				<li class="list-group-item float-start">
-					<i role="button" class="bi bi-person-fill icon-size mt-1"></i>
+					<i role="button" class="bi bi-person-fill fs-4 mt-1"></i>
 			</li>
-				<li class="list-group-item icon-size">
+				<li class="list-group-item fs-4">
 					<i role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="bi bi-cart4 bag"></i>
 				</li>
 			</ul>
@@ -75,7 +75,7 @@
 		Você tem 3 cupons! Aproveite seus descontos
 	</h6>
 	<div>
-		<i id="icon-offcanvas" role="button" class="bi bi-chevron-down icon-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-coupom" data-bs-dismiss="offcanvas-coupom"
+		<i id="icon-offcanvas" role="button" class="bi bi-chevron-down text-orange fs-3 me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-coupom" data-bs-dismiss="offcanvas-coupom"
 		aria-controls="offcanvas-coupom" onclick="iconCanvasToggler()">
 		</i>
 	</div>
@@ -86,17 +86,20 @@
     <div class="row container-fluid d-md-flex justify-content-center">
 			<div class="col-md card-body-w mb-3">
 				<div class="card">
-					<div class="card-body border">
-						<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
+					<div class="card-body bg-light">
+						<div class="d-flex justify-content-start align-items-center">
+							<img src="/img/coupom-outline.svg" height="55" class="mx-2">
+							<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
+						</div>
 						<p class="card-text text-start fs-6">Válido para o primeiro pedido em Bebidas acima de R$50</p>
-							<a role="button" href="#" class="container-fluid btn-outline-purple fw-semibold">Ver lojas</a>
+							<a role="button" href="#" class="container-fluid btn btn-outline-purple fw-semibold">Ver lojas</a>
 						<div class="row mt-2">
-							<p class="col text-start text-purple fw-semibold pointer">Ver regras</p>
-							<p class="col text-end card-footer-valid">Válido até 23/06</p>
+							<a href="#" class="col text-start link-purple fw-semibold text-decoration-none">Ver regras</a>
+							<p class="col text-end text-gray">Válido até 23/06</p>
 						</div>
 					</div>
 					<div class="card-footer text-center">
-						<h6 class="card-footer-text">
+						<h6 class="text-gray fs-footer">
 							O cupom será aplicado no pagamento
 						</h6>
 					</div>
@@ -104,17 +107,20 @@
 			</div>
 			<div class="col-md card-body-w mb-3">
 				<div class="card">
-					<div class="card-body">
-						<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
+					<div class="card-body bg-light">
+						<div class="d-flex justify-content-start align-items-center">
+							<img src="/img/coupom-outline.svg" height="55" class="mx-2">
+							<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
+						</div>
 						<p class="card-text text-start fs-6">Válido para o primeiro pedido em Bebidas acima de R$50</p>
-							<a role="button" href="#" class="container-fluid btn-outline-purple fw-semibold">Ver lojas</a>
+							<a role="button" href="#" class="btn container-fluid btn-outline-purple fw-semibold link">Ver lojas</a>
 						<div class="row mt-2">
-							<p class="col text-start text-purple fw-semibold pointer">Ver regras</p>
-							<p class="col text-end card-footer-valid">Válido até 23/06</p>
+							<a href="#" class="col text-start link-purple fw-semibold text-decoration-none">Ver regras</a>
+							<p class="col text-end text-gray">Válido até 23/06</p>
 						</div>
 					</div>
 					<div class="card-footer text-center">
-						<h6 class="card-footer-text">
+						<h6 class="text-gray fs-footer">
 							O cupom será aplicado no pagamento
 						</h6>
 					</div>
@@ -122,17 +128,20 @@
 			</div>
 			<div class="col-md card-body-w mb-3">
 				<div class="card">
-					<div class="card-body">
-						<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
+					<div class="card-body bg-light">
+						<div class="d-flex justify-content-start align-items-center">
+							<img src="/img/coupom-outline.svg" height="55" class="mx-2">
+							<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
+						</div>
 						<p class="card-text text-start fs-6">Válido para o primeiro pedido em Bebidas acima de R$50</p>
-							<a role="button" href="#" class="container-fluid btn-outline-purple fw-semibold">Ver lojas</a>
+							<a role="button" href="#" class="container-fluid btn btn-outline-purple fw-semibold">Ver lojas</a>
 						<div class="row mt-2">
-							<p class="col text-start text-purple fw-semibold pointer">Ver regras</p>
-							<p class="col text-end card-footer-valid">Válido até 23/06</p>
+							<a href="#" class="col text-start link-purple fw-semibold text-decoration-none">Ver regras</a>
+							<p class="col text-end text-gray">Válido até 23/06</p>
 						</div>
 					</div>
 					<div class="card-footer text-center">
-						<h6 class="card-footer-text">
+						<h6 class="text-gray fs-footer">
 							O cupom será aplicado no pagamento
 						</h6>
 					</div>
@@ -141,8 +150,6 @@
 		</div>
   </div>
 </div>
-</section>
-<section>
 </section>
 <!-- carousel multiple items -->
 <section>
@@ -182,20 +189,20 @@
 						Handmade Burguer
 					</div>
 					<div class="">
-						<div class="rating d-inline-flex">
+						<div class="text-yellow d-inline-flex">
 							<i class="bi bi-star-fill"></i>
 							<div class="mx-1">
 								4.5
 							</div>
 						</div>
-						<div class="d-inline-flex store-text store-text-color">
+						<div class="d-inline-flex text-gray-store fs-store-size">
 							• Lanches •
 						</div>
-						<div class="d-inline-flex store-text store-text-color">
+						<div class="d-inline-flex text-gray-store fs-store-size">
 							2.2km
 						</div>
 					</div>
-						<div class="d-inline-flex store-text store-text-color">
+						<div class="d-inline-flex text-gray-store fs-store-size">
 							30-40 min • R$ 4,00
 					</div>
 				</div>
@@ -209,21 +216,21 @@
 					American Fried Pastry
 				</div>
 				<div class="">
-					<div class="rating d-inline-flex">
+					<div class="text-yellow d-inline-flex">
 						<i class="bi bi-star-fill"></i>
 						<div class="mx-1">
 							4.7
 						</div>
 					</div>
-					<div class="d-inline-flex store-text store-text-color">
+					<div class="d-inline-flex text-gray-store fs-store-size">
 						• Pastel •
 					</div>
-					<div class="d-inline-flex store-text store-text-color">
+					<div class="d-inline-flex text-gray-store fs-store-size">
 						3.7km
 					</div>
 				</div>
-					<div class="d-inline-flex store-text store-text-color">
-						50-60 min • <span class="text-success ms-1">grátis</span>
+					<div class="d-inline-flex text-gray-store fs-store-size">
+						50-60 min • <span class="text-green ms-1">Grátis</span>
 				</div>
 			</div>
 	</div>
@@ -236,21 +243,21 @@
 				Itadakimasu
 			</div>
 			<div class="">
-				<div class="rating d-inline-flex">
+				<div class="text-yellow d-inline-flex">
 					<i class="bi bi-star-fill"></i>
 					<div class="mx-1">
 						4.2
 					</div>
 				</div>
-				<div class="d-inline-flex store-text store-text-color">
+				<div class="d-inline-flex text-gray-store fs-store-size">
 					• Japonesa •
 				</div>
-				<div class="d-inline-flex store-text store-text-color">
+				<div class="d-inline-flex text-gray-store fs-store-size">
 					1.5km
 				</div>
 			</div>
-				<div class="d-inline-flex store-text store-text-color">
-					40-50 min • <span class="text-success ms-1">grátis</span>
+				<div class="d-inline-flex text-gray-store fs-store-size">
+					40-50 min • <span class="text-green ms-1">Grátis</span>
 			</div>
 		</div>
 	</div>
@@ -263,20 +270,20 @@
 				Açai's House
 			</div>
 			<div class="">
-				<div class="rating d-inline-flex">
+				<div class="text-yellow d-inline-flex">
 					<i class="bi bi-star-fill"></i>
 					<div class="mx-1">
 						4.0
 					</div>
 				</div>
-				<div class="d-inline-flex store-text store-text-color">
+				<div class="d-inline-flex text-gray-store fs-store-size">
 					• Açai •
 				</div>
-				<div class="d-inline-flex store-text store-text-color">
+				<div class="d-inline-flex text-gray-store fs-store-size">
 					2km
 				</div>
 			</div>
-				<div class="d-inline-flex store-text store-text-color">
+				<div class="d-inline-flex text-gray-store fs-store-size">
 					30-40 min • R$ 3,50
 			</div>
 		</div>
@@ -290,20 +297,20 @@
 				Milk Shaker
 			</div>
 			<div class="">
-				<div class="rating d-inline-flex">
+				<div class="text-yellow d-inline-flex">
 					<i class="bi bi-star-fill"></i>
 					<div class="mx-1">
 						4.5
 					</div>
 				</div>
-				<div class="d-inline-flex store-text store-text-color">
+				<div class="d-inline-flex text-gray-store fs-store-size">
 					• Sorvetes •
 				</div>
-				<div class="d-inline-flex store-text store-text-color">
+				<div class="d-inline-flex text-gray-store fs-store-size">
 					5km
 				</div>
 			</div>
-				<div class="d-inline-flex store-text store-text-color">
+				<div class="d-inline-flex text-gray-store fs-store-size">
 					80-90 min • R$ 5,00
 			</div>
 		</div>
@@ -317,21 +324,21 @@
 				China Town
 			</div>
 			<div class="">
-				<div class="rating d-inline-flex">
+				<div class="text-yellow d-inline-flex">
 					<i class="bi bi-star-fill"></i>
 					<div class="mx-1">
 						3.9
 					</div>
 				</div>
-				<div class="d-inline-flex store-text store-text-color">
+				<div class="d-inline-flex text-gray-store fs-store-size">
 					• Chinesa •
 				</div>
-				<div class="d-inline-flex store-text store-text-color">
+				<div class="d-inline-flex text-gray-store fs-store-size">
 					1.7km
 				</div>
 			</div>
-				<div class="d-inline-flex store-text store-text-color">
-					30-40 min • <span class="text-success ms-1">grátis</span>
+				<div class="d-inline-flex text-gray-store fs-store-size">
+					30-40 min • <span class="text-green ms-1">Grátis</span>
 			</div>
 		</div>
 	</div>
@@ -344,21 +351,21 @@
 				Pizzeria del Giorno
 			</div>
 			<div class="">
-				<div class="rating d-inline-flex">
+				<div class="text-yellow d-inline-flex">
 					<i class="bi bi-star-fill"></i>
 					<div class="mx-1">
 						4.2
 					</div>
 				</div>
-				<div class="d-inline-flex store-text store-text-color">
+				<div class="d-inline-flex text-gray-store fs-store-size">
 					• Pizza •
 				</div>
-				<div class="d-inline-flex store-text store-text-color">
+				<div class="d-inline-flex text-gray-store fs-store-size">
 					3km
 				</div>
 			</div>
-				<div class="d-inline-flex store-text store-text-color">
-					50-60 min • <span class="text-success ms-1">grátis</span>
+				<div class="d-inline-flex text-gray-store fs-store-size">
+					50-60 min • <span class="text-green ms-1">Grátis</span>
 			</div>
 		</div>
 	</div>

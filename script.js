@@ -7,27 +7,20 @@ let textPurple = document.querySelectorAll('.text-purple');
 let storeText = document.querySelectorAll('.store-text');
 let carouselBtn = document.querySelectorAll('.carousel-light');
 let nav = document.getElementById('nav');
+let cardBackground = document.querySelectorAll('.card-body, .bg-light');
 
 const buttonOutlineToggler = function (event) {
 	if(event === 'light'){
-		for(let i = 0; i < 3; i++){
-			buttonPurple[i].classList.remove('btn')
-			buttonPurple[i].classList.replace( 'btn-outline-light', 'btn-outline-purple');
-			textPurple[i].classList.replace('text-light', 'text-purple');
-		}
 		storeText.forEach(element => element.classList.add('store-text-color'));
 		carouselBtn.forEach(element => element.classList.replace('carousel-dark', 'carousel-light'));
 		nav.classList.replace('bg-dark', 'bg-light');
+		cardBackground.forEach(element => element.classList.replace('bg-dark', 'bg-light'));
 	}
 	else if(event === 'dark'){
-		for(let i = 0; i < 3; i++){
-			buttonPurple[i].classList.add('btn')
-			buttonPurple[i].classList.replace( 'btn-outline-purple', 'btn-outline-light');
-			textPurple[i].classList.replace('text-purple', 'text-light')
-		}
 		storeText.forEach(element => element.classList.remove('store-text-color'))
 		carouselBtn.forEach(element => element.classList.replace('carousel-light', 'carousel-dark'));
 		nav.classList.replace('bg-light', 'bg-dark');
+		cardBackground.forEach(element => element.classList.replace('bg-light', 'bg-dark'));
 	}
 };
 const setIcon = function () {

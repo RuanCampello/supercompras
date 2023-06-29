@@ -14,9 +14,9 @@
 <section>
 	<nav id="nav" class="navbar navbar-expand-md container-fluid navbar-top bg-light">
 			<a class="navbar-brand" href="#">
-			<img src="./img/logo.svg" height="35">
+			<img class="ms-3" src="./img/logo.svg" height="35">
 			<span class="fw-bolder">Super Compras</span></a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+			<button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse ms-3" id="navmenu">
@@ -34,13 +34,14 @@
 						<a class="nav-link" href="#mercado">Mercado</a>
 					</li>
 				</ul>
+			</div>
 <!-- search bar -->
-			<div class="input-group d-flex justify-content-between nav-item mt-3 mb-3">
+			<div class="input-group d-none d-lg-flex mt-2 mx-4">
 				<span class="input-group-text bi bi-search text-light bg-purple ms-3" id="basic-addon1"></span>
-				<input type="text" class="form-control focus-ring focus-ring-purple me-3" placeholder="Busque items ou lojas" aria-label="Username" aria-describedby="basic-addon1">
+				<input type="text" class="form-control focus-ring focus-ring-purple me-4" placeholder="Busque items ou lojas" aria-label="Username" aria-describedby="basic-addon1">
 			</div>
 <!-- iteractive icons -->
-			<ul class="list-group list-group-horizontal me-2">
+			<ul class="list-group list-group-horizontal me-2 d-none d-md-flex">
 				<li class="list-group-item float-start">
 					<i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-4" onclick="setIcon()"></i>
 				</li>

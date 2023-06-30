@@ -74,6 +74,14 @@ section{
 	.content-w {
 		min-width: 160px;
 	}
+	header {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+	}
+	.nav-link {
+		margin-inline: 3px;
+	}
 }
 .carousel-img {
 	max-width: 100%;

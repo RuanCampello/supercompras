@@ -12,30 +12,30 @@
 <body id="theme" data-bs-theme="">
 <!-- navbar on desktop -->
 <section>
- <nav id="nav" class="navbar d-none d-md-flex align-items-center navbar-top bg-light">
+ <nav id="nav" class="navbar align-items-center navbar-top bg-light">
 	<div class="container-fluid">
 		<header class="mt-2">
 			<a href="#" class="navbar-brand float-start d-none d-lg-flex">
 				<img src="/img/logo.svg" width="35">
 				<span class="fw-bolder">
 					S<span class="text-purple">upe</span>r Compras
-				 </span>
-			 </a>
-			 <ul class="navbar-nav list-group list-group-horizontal">
-				 <li class="nav-item me-3"><a href="#inicio" class="nav-link active">Início</a></li>
-				 <li class="nav-item me-3"><a href="#restaurantes" class="nav-link">Restaurantes</a></li>
-				 <li class="nav-item me-3"><a href="#" class="nav-link">Bebidas</a></li>
-				 <li class="nav-item me-3"><a href="#" class="nav-link">Mercado</a></li>
-			 </ul>
+				</span>
+			</a>
+			<ul class="navbar-nav list-group list-group-horizontal">
+				<li class="nav-item me-3"><a href="#inicio" class="nav-link active">Início</a></li>
+				<li class="nav-item me-3"><a href="#restaurantes" class="nav-link">Restaurantes</a></li>
+				<li class="nav-item me-3"><a href="#" class="nav-link">Bebidas</a></li>
+				<li class="nav-item me-3"><a href="#" class="nav-link">Mercado</a></li>
+			</ul>
 		</header>
-			<form role="search" class="input-group" style="max-width: 27%;">
-				<i class="input-group-text fa-solid fa-magnifying-glass fs-5 bg-purple text-light"></i>
+			<form role="search" class="input-group d-none d-md-flex" style="max-width: 27%;">
+				<i class="input-group-text fa-solid fa-magnifying-glass fs-5 bg-purple text-light d-none d-lg-flex"></i>
 				<input type="text" class="form-control focus-ring focus-ring-purple text-light" placeholder="Busque por item ou loja">
 			</form>
-				<ul class="justify-content-end list-group list-group-horizontal d-flex-inline">
-					<li class="list-group-item"><i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-4" onclick="setIcon()"></i></li>
-					<li class="list-group-item"><i role="button" class="bi bi-person-fill fs-4 mt-1"></i></li>
-					<li class="list-group-item"><i role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="bi bi-cart4 bag fs-4"></i></li>
+				<ul class="justify-content-end list-group list-group-horizontal d-none d-md-flex">
+					<li class="list-group-item"><i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-5" onclick="setIcon()"></i></li>
+					<li class="list-group-item"><i role="button" class="bi bi-person-fill fs-5 mt-1"></i></li>
+					<li class="list-group-item"><i role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="bi bi-cart4 bag fs-5"></i></li>
 				</ul>
 	</div>
  </nav>
@@ -67,8 +67,10 @@
 	</div>
 </div>
 <div class="offcanvas offcanvas-w offcanvas-bottom h-50 overflow-auto" data-bs-scroll="false" tabindex="-1" id="offcanvas-coupom" aria-labelledby="offcanvas-coupomLabel">
-  <div class="offcanvas-header bg-gray-store">
-		<i role="button" class="bi bi-caret-left-fill fs-3 text-orange bg-light border circle"></i>
+  <div id="offcanvas-coupom-header" class="offcanvas-header bg-purple d-md-none d-sm-block">
+		<div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
+			<i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
+		</div>
 	</div>
   <div class="offcanvas-body">
     <div class="row container-fluid d-md-flex justify-content-center">

@@ -8,7 +8,6 @@ let storeText = document.querySelectorAll('.store-text');
 let carouselBtn = document.querySelectorAll('.carousel-light');
 let cardBackground = document.querySelectorAll('.btn-outline-purple');
 let nav = document.getElementById('nav');
-
 const buttonOutlineToggler = function (event) {
 	if(event === 'light'){
 		carouselBtn.forEach(element => element.classList.replace('carousel-dark', 'carousel-light'));
@@ -60,7 +59,7 @@ $('#discount-carousel .carousel-control-prev').on('click', function(){
 
 document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('scroll', function() {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 10) {
         document.querySelectorAll('.navbar-top').forEach(element => element.classList.add('fixed-top'));
         // add padding top to show content behind navbar
         let navbar_height = document.querySelector('.navbar').offsetHeight;

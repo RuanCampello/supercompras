@@ -44,14 +44,14 @@ offcanvasCoupom.addEventListener('hidden.bs.offcanvas', () => {
 // carousel controller 
 let cWidth = $('.carousel-inner')[0].scrollWidth;
 let imgWidth = $('.carousel-item').width();
-let scrollPosition = 0
-$('#carouselExample .carousel-control-next').on('click', function(){
+let scrollPosition = $('.first-item').width();
+$('#discount-carousel .carousel-control-next').on('click', function(){
 	if(scrollPosition < (cWidth-(imgWidth*3))){
 		scrollPosition += imgWidth;
 		$('.carousel-inner').animate({scrollLeft: scrollPosition, behavior: 'smooth'});
 	}
 });
-$('#carouselExample .carousel-control-prev').on('click', function(){
+$('#discount-carousel .carousel-control-prev').on('click', function(){
 	if(scrollPosition > 0){
 		scrollPosition -= imgWidth;
 		$('.carousel-inner').animate({scrollLeft: scrollPosition, behavior: 'smooth'});

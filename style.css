@@ -24,8 +24,15 @@ section{
 	margin: 0;
 	padding: 0;
 }
+.card-body-w {
+		margin-top: 15px;
+		min-width: 230px;
+		max-width: 300px;
+		margin-right: 0;
+		padding-right: 0;
+	}
 /* carousel responsive */
-@media screen and (min-width:640px) {
+@media screen and (min-width:768px) {
 	.carousel-inner {
 		display: flex;
 	}
@@ -35,7 +42,7 @@ section{
 		flex: 0 0 calc(100%/2);
 	}
 }
-@media screen and (min-width:1000px) {
+@media screen and (min-width:992px) {
 	.carousel-inner {
 		display: flex;
 	}
@@ -45,42 +52,27 @@ section{
 		flex: 0 0 calc(100%/3);
 	}
 }
-/* resposive stores */
-@media screen and (max-width: 880px){
-	a.nav-link {
-		display: block;
-	}
+/* store width responsive on mobile */
+.content-w {
+	min-width: 200px;
 }
-@media screen and (max-width: 770px){
-	.store-body-w {
-	width: 90%;
-	padding: 0 0 0 15px;
-	}
+.store-body-w {
+	width: auto;
 }
-@media screen and (min-width: 770px){
+@media screen and (max-width: 992px){
 	.store-body-w {
 		width: 45%;
-		padding: 0 0 0 15px;
 	}
 }
-@media screen and (min-width: 1340px) {
-	.card-body-w {
-		margin-top: 15px;
-		min-width: 230px;
-		max-width: 300px;
-		margin-right: 0;
-		padding-right: 0;
-	}
+@media screen and (max-width: 767px){
 	.store-body-w {
-		margin-top: 15px;
-		max-width: 420px;
-		min-width: 390px;
+		width: 85%;
+	}
+	#restaurantes {
+		justify-content: start;
 	}
 	.content-w {
-		min-width: 230px;
-		max-width: 260px;
-		margin-right: 0;
-		padding-right: 0;
+		min-width: 160px;
 	}
 }
 .carousel-img {

@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="./css/main.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 	<link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+	<link href="./css/main.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<title>Super Compras</title>
 </head>
@@ -14,36 +14,36 @@
 <section>
  <nav id="nav" class="navbar align-items-center navbar-top bg-light">
 	<div class="container-fluid">
-		<header class="mt-2">
+		<header class="mt-1">
 			<a href="#" class="navbar-brand float-start d-none d-lg-flex">
 				<img src="/img/logo.svg" width="35">
-				<span class="fw-bolder">
+				<span class="ms-3" style="font-family: 'Caprasimo', cursive;">
 					S<span class="text-purple">upe</span>r Compras
 				</span>
 			</a>
 			<ul class="navbar-nav list-group list-group-horizontal">
-				<li class="nav-item me-3"><a href="#inicio" class="nav-link active">Início</a></li>
+				<li class="nav-item me-3"><a href="#" class="active nav-link">Início</a></li>
 				<li class="nav-item me-3"><a href="#restaurantes" class="nav-link">Restaurantes</a></li>
 				<li class="nav-item me-3"><a href="#" class="nav-link">Bebidas</a></li>
-				<li class="nav-item me-3"><a href="#" class="nav-link">Mercado</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Mercado</a></li>
 			</ul>
 		</header>
 			<form role="search" class="input-group d-none d-md-flex" style="max-width: 27%;">
-				<i class="input-group-text fa-solid fa-magnifying-glass fs-5 bg-purple text-light d-none d-lg-flex"></i>
-				<input type="text" class="form-control focus-ring focus-ring-purple text-light" placeholder="Busque por item ou loja">
+				<i class="input-group-text bi bi-search fs-5 bg-purple text-light d-none d-lg-flex"></i>
+				<input type="text" class="form-control focus-ring focus-ring-purple" placeholder="Busque por item ou loja">
 			</form>
 				<ul class="justify-content-end list-group list-group-horizontal d-none d-md-flex">
 					<li class="list-group-item"><i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-5" onclick="setIcon()"></i></li>
-					<li class="list-group-item"><i role="button" class="bi bi-person-fill fs-5 mt-1"></i></li>
-					<li class="list-group-item"><i role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="bi bi-cart4 bag fs-5"></i></li>
+					<li class="list-group-item"><i role="button" class="bi bi-person-fill fs-5 mt-1" data-bs-toggle="offcanvas" data-bs-target="#profile-offcanvas" aria-controls="profile-offcanvas"></i></li>
+					<li class="list-group-item"><i role="button" data-bs-toggle="offcanvas" data-bs-target="#cart-offcanvas" aria-controls="cart-offcanvas" class="bi bi-cart4 bag fs-5"></i></li>
 				</ul>
 	</div>
  </nav>
 <!-- cart offcanvas -->
 <div class="container-fluid">
-	<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-		<div class="offcanvas-header">
-			<h5 class="offcanvas-title" id="offcanvasRightLabel">Carrinho de compras</h5>
+	<div class="offcanvas offcanvas-end" data-bs-backdrop="false" tabindex="-1" id="cart-offcanvas" aria-labelledby="cart-offcanvasLabel">
+		<div class="offcanvas-header" id="cart-offcanvasLabel">
+			<h5 class="offcanvas-title" id="cart-offcanvasLabel">Carrinho de compras</h5>
 			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 		</div>
 		<div class="offcanvas-body">
@@ -51,13 +51,58 @@
 		</div>
 	</div>
 </div>
+<!-- profile offcanvas -->
+<div class="container-fluid">
+	<div class="offcanvas offcanvas-end" tabindex="-1" id="profile-offcanvas" aria-labelledby="profile-offcanvasLabel" data-bs-backdrop="false">
+		<div class="offcanvas-header bg-purple border-3 border-purple mb-3">
+			<div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
+				<i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
+			</div>
+			<h5 class="offcanvas-title text-light" id="profile-offcanvasLabel">Olá</h5>
+		</div>
+		<div class="offcanvas-body">
+			<div class="row">
+				<a role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-coupom" data-bs-dismiss="offcanvas-coupom"
+				aria-controls="offcanvas-coupom"><i class="bi bi-ticket-perforated"></i></a>
+			</div>
+			<hr class="border rounded border-2 border-purple opacity-75">
+		</div>
+	</div>
+</div>
+</section>
+<!-- navbar mobile -->
+<section>
+	<nav class="border-top border-5 border-purple navbar fixed-bottom d-md-none d-sm-flex bg-light align-items-center justify-content-between" style="z-index: 999;">
+		<ul class="navbar-nav list-group list-group-horizontal container-fluid mx-4 px-1">
+			<li class="nav-item">
+				<a href="#" class="nav-link">
+					<i role="button" class="bi bi-house fs-1"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link">
+					<i role="button" class="bi bi-search fs-1"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#profile-offcanvas" aria-controls="profile-offcanvas">
+					<i role="button" class="bi bi-person fs-1 nav-link"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#cart-offcanvas" aria-controls="cart-offcanvas">
+					<i role="button" class="bi bi bi-bag fs-1"></i>
+				</a>
+			</li>
+		</ul>
+	</nav>
 </section>
 <!-- promotion rows -->
 <section>
 	<!-- dropdown cards -->
-<div class="container-fluid bg-purple d-flex justify-content-center align-items-center p-2">
+<div class="container-fluid bg-purple d-none d-md-flex justify-content-center align-items-center p-2">
 	<img src="img/coupom.svg" height="35">
-	<h6 class="mt-2 mx-4 text-light fw-medium" style="font-family: 'Arimo', sans-serif;">
+	<h6 id="coupom-header" class="mt-2 mx-4 text-light fw-medium" style="font-family: 'Arimo', sans-serif;">
 		Você tem 3 cupons! Aproveite seus descontos
 	</h6>
 	<div>
@@ -66,7 +111,7 @@
 		</i>
 	</div>
 </div>
-<div class="offcanvas offcanvas-w offcanvas-bottom h-50 overflow-auto" data-bs-scroll="false" tabindex="-1" id="offcanvas-coupom" aria-labelledby="offcanvas-coupomLabel">
+<div class="offcanvas offcanvas-w offcanvas-bottom overflow-auto" data-bs-scroll="false" tabindex="-1" id="offcanvas-coupom" aria-labelledby="offcanvas-coupomLabel">
   <div id="offcanvas-coupom-header" class="offcanvas-header bg-purple d-md-none d-sm-block">
 		<div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
 			<i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
@@ -142,16 +187,16 @@
 </div>
 </section>
 <!-- carousel multiple items -->
-<section>
+<section >
 	<div id="discount-carousel" class="carousel container-fluid">
-		<ol class="carousel-indicators d-md-none d-sm-flex">
+		<ol class="carousel-indicators d-md-none d-sm-flex m-0">
 			<button type="button" data-bs-target="#discount-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 			<button type="button" data-bs-target="#discount-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
 			<button type="button" data-bs-target="#discount-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			<button type="button" data-bs-target="#discount-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
 		</ol>	
 		<div class="carousel-inner">
-			<div class="carousel-item active first-item carousel-img ms-3">
+			<div class="carousel-item active first-item carousel-img">
 				<img src="./img/marcas-famosas.svg" class="d-block w-100 img-wrapper">
 			</div>
 			<div class="carousel-item carousel-img">
@@ -173,7 +218,7 @@
 	</div>
 </section>
 <!-- stores -->
-<section>
+<section class="body-section">
 	<div class="row justify-content-center" id="restaurantes">
 		<h4 class="ms-3 mt-3">Restaurantes</h4>
 		<div class="d-flex m-3 store-body-w border border-gray-store border-opacity-25 rounded">
@@ -356,8 +401,8 @@
 </div>
 </section>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/f4b3ea8cf3.js" crossorigin="anonymous"></script>
 <script src="./script.js"></script>
 </body>
 </html>

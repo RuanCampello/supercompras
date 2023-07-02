@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
 section{
 	overflow: hidden;
 }
-.nav-link::after {
-	margin-top: 4px;
-  content: "";
-	position: relative;
-  width: 0%;
-  height: 2px;
-  display: block;
-  transition: all 0.5s ease;
+::selection {
+  color: #ffffff;
+  background: #5e17eb;
 }
-.nav-link:hover::after {
-	width: 100%;
-  height: 2px;
-  background-color: #5e17eb;
+#coupom-header::selection {
+	color: #5e17eb;
+	background: #ffffff;
+}
+#nav {
+	z-index: 3;
 }
 .border-gray-store:hover {
 	transition: 0.4s all ease-in-out;
@@ -30,7 +28,7 @@ section{
 		max-width: 300px;
 		margin-right: 0;
 		padding-right: 0;
-	}
+}
 /* carousel responsive */
 @media screen and (min-width:768px) {
 	.carousel-inner {
@@ -39,7 +37,21 @@ section{
 	.carousel-item {
 		display: block;
 		margin-right: 1%;
-		flex: 0 0 calc(100%/2);
+		flex: 0 0 calc(100%/2.25);
+	}
+	.nav-link::after {
+		margin-top: 4px;
+		content: "";
+		position: relative;
+		width: 0%;
+		height: 2px;
+		display: block;
+		transition: all 0.5s ease;
+	}
+	.nav-link:hover::after {
+		width: 100%;
+		height: 2px;
+		background-color: #5e17eb;
 	}
 }
 @media screen and (min-width:992px) {
@@ -49,7 +61,13 @@ section{
 	.carousel-item {
 		display: block;
 		margin-right: 1%;
-		flex: 0 0 calc(100%/3);
+		flex: 0 0 calc(100%/3.25);
+	}
+	.body-section {
+		padding-inline: 45px;
+	}
+	#offcanvas-coupom {
+		height: 50vh;
 	}
 }
 /* store width responsive on mobile */
@@ -82,6 +100,12 @@ section{
 	.nav-link {
 		margin-inline: 3px;
 	}
+	#offcanvas-coupom {
+		height: 100vh;
+	}
+}
+.offcanvas {
+	z-index: 5;
 }
 .carousel-img {
 	max-width: 100%;
@@ -103,7 +127,8 @@ section{
 	z-index: 1;
 }
 .carousel-inner{
-	padding: 1em;
+	padding: 0;
+	margin: 1rem 0 0 0;
 }
 .card{
 	box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);

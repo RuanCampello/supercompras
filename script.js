@@ -2,22 +2,21 @@
 let icon = document.getElementById('toggle-btn');
 let themeChanger = document.getElementById('theme');
 let buttonPurple = document.querySelectorAll('.btn-outline-purple');
-console.log(buttonPurple[0]);
 let textPurple = document.querySelectorAll('.text-purple');
 let storeText = document.querySelectorAll('.store-text');
 let carouselBtn = document.querySelectorAll('.carousel-light');
 let cardBackground = document.querySelectorAll('.btn-outline-purple');
-let nav = document.getElementById('nav');
+let nav = document.querySelectorAll('.navbar');
 const buttonOutlineToggler = function (event) {
 	if(event === 'light'){
 		carouselBtn.forEach(element => element.classList.replace('carousel-dark', 'carousel-light'));
 		cardBackground.forEach(element => element.classList.replace('btn-purple', 'btn-outline-purple'));
-		nav.classList.replace('bg-dark', 'bg-light');
+		nav.forEach(element => element.classList.replace('bg-dark', 'bg-light'));
 	}
 	else if(event === 'dark'){
 		carouselBtn.forEach(element => element.classList.replace('carousel-light', 'carousel-dark'));
 		cardBackground.forEach(element => element.classList.replace('btn-outline-purple', 'btn-purple'));
-		nav.classList.replace('bg-light', 'bg-dark');
+		nav.forEach(element => element.classList.replace('bg-light', 'bg-dark'));
 	}
 };
 const setIcon = function () {
@@ -47,13 +46,13 @@ let scrollPosition = $('.first-item').width();
 $('#discount-carousel .carousel-control-next').on('click', function(){
 	if(scrollPosition < (cWidth-(imgWidth*3))){
 		scrollPosition += imgWidth;
-		$('.carousel-inner').animate({scrollLeft: scrollPosition, behavior: 'smooth'});
+		$('.carousel-inner').animate({scrollLeft: scrollPosition, behavior: 'smooth'}, 700);
 	}
 });
 $('#discount-carousel .carousel-control-prev').on('click', function(){
 	if(scrollPosition > 0){
 		scrollPosition -= imgWidth;
-		$('.carousel-inner').animate({scrollLeft: scrollPosition, behavior: 'smooth'});
+		$('.carousel-inner').animate({scrollLeft: scrollPosition, behavior: 'smooth'}, 700);
 	}
 });
 

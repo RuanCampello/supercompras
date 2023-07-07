@@ -16,7 +16,7 @@
 	<div class="container-fluid">
 		<header class="mt-1">
 			<a href="#" class="navbar-brand float-start d-none d-lg-flex">
-				<img src="/img/logo.svg" width="35">
+				<img src="./img/logo.svg" width="35">
 				<span class="ms-3" style="font-family: 'Caprasimo', cursive;">
 					S<span class="text-purple">upe</span>r Compras
 				</span>
@@ -71,29 +71,33 @@
 </div>
 </section>
 <!-- navbar mobile -->
-<section>
-	<nav class="border-top border-5 border-purple navbar fixed-bottom d-md-none d-sm-flex bg-light align-items-center justify-content-between" style="z-index: 999;">
+	<nav class="border-top border-5 border-purple navbar fixed-bottom d-md-none d-sm-flex bg-light align-items-center justify-content-between text-center" style="z-index: 999;">
 		<ul class="navbar-nav list-group list-group-horizontal container-fluid mx-4 px-1">
 			<li class="nav-item">
-				<a href="#" class="nav-link">
-					<i role="button" class="bi bi-house fs-1"></i>
+				<a href="#" class="nav-link actived">
+					<i id="house-icon" role="button" class="bi fs-2 d-block bi-house-fill"></i>
+					<span class="text">Início</span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a href="#" class="nav-link">
-					<i role="button" class="bi bi-search fs-1"></i>
+					<i role="button" class="bi fs-2 d-block bi-search"></i>
+					<span class="text">Buscar</span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a href="#" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#profile-offcanvas" aria-controls="profile-offcanvas">
-					<i role="button" class="bi bi-person fs-1 nav-link"></i>
+					<i id="person-icon" role="button" class="fs-2 d-block bi bi-person"></i>
+					<span class="text">Perfil</span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a href="#" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#cart-offcanvas" aria-controls="cart-offcanvas">
-					<i role="button" class="bi bi bi-bag fs-1"></i>
+					<i id="bag-icon" role="button" class="bi fs-2 d-block bi-bag"></i>
+					<span class="text">Carrinho</span>
 				</a>
 			</li>
+			
 		</ul>
 	</nav>
 </section>
@@ -111,7 +115,7 @@
 		</i>
 	</div>
 </div>
-<div class="offcanvas offcanvas-w offcanvas-bottom overflow-auto" data-bs-scroll="false" tabindex="-1" id="offcanvas-coupom" aria-labelledby="offcanvas-coupomLabel">
+<div class="offcanvas offcanvas-w offcanvas-bottom overflow-auto" data-bs-scroll="false" data-bs-backdrop="false" tabindex="-1" id="offcanvas-coupom" aria-labelledby="offcanvas-coupomLabel">
   <div id="offcanvas-coupom-header" class="offcanvas-header bg-purple d-md-none d-sm-block">
 		<div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
 			<i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
@@ -187,8 +191,8 @@
 </div>
 </section>
 <!-- carousel multiple items -->
-<section >
-	<div id="discount-carousel" class="carousel container-fluid">
+<section>
+	<div id="discount-carousel" class="carousel container-fluid p-0">
 		<ol class="carousel-indicators d-md-none d-sm-flex m-0">
 			<button type="button" data-bs-target="#discount-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 			<button type="button" data-bs-target="#discount-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -205,7 +209,7 @@
 			<div class="carousel-item carousel-img">
 				<img src="./img/entrega-gratis.svg" class="d-block w-100 img-wrapper">
 			</div>
-			<div class="carousel-item carousel-img me-3">
+			<div class="carousel-item carousel-img">
 				<img src="./img/refris.svg" class="d-block w-100 img-wrapper">
 			</div>
 		</div>
@@ -220,10 +224,10 @@
 <!-- stores -->
 <section class="body-section">
 	<div class="row justify-content-center" id="restaurantes">
-		<h4 class="ms-3 mt-3">Restaurantes</h4>
-		<div class="d-flex m-3 store-body-w border border-gray-store border-opacity-25 rounded">
+		<h4 class="ms-5 mt-3">Lojas</h4>
+		<div class="d-flex mx-1 mt-3 store-body-w border border-gray-store border-opacity-25 rounded">
 				<div class="">
-					<img src="./img/home-burguer.svg" width="110" class="rounded my-3">
+					<img src="./img/home-burguer.svg" width="110" class="rounded my-3 me-2">
 				</div>
 				<div class="content-w ms-2 text-start mt-4">
 					<div class="fs-6 text-start">
@@ -248,7 +252,7 @@
 					</div>
 				</div>
 		</div>
-		<div class="d-flex m-3 store-body-w border border-gray-store border-opacity-25 rounded">
+		<div class="d-flex mx-1 mt-3 store-body-w border border-gray-store border-opacity-25 rounded">
 			<img src="./img/american-fried-pastry.svg" width="110" class="rounded my-3 me-2">
 			<div class="content-w ms-2 text-start mt-4">
 				<div class="fs-6 text-start">
@@ -273,7 +277,7 @@
 				</div>
 			</div>
 	</div>
-	<div class="d-flex m-3 store-body-w border border-gray-store border-opacity-25 rounded">
+	<div class="d-flex mx-1 mt-3 store-body-w border border-gray-store border-opacity-25 rounded">
 		<img src="./img/itadakimasu.svg" width="110" class="rounded me-2 my-3">
 		<div class="content-w ms-2 text-start mt-4">
 			<div class="fs-6 text-start">
@@ -298,7 +302,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="d-flex m-3 store-body-w border border-gray-store border-opacity-25 rounded">
+	<div class="d-flex mx-2 mt-3 store-body-w border border-gray-store border-opacity-25 rounded">
 		<img src="./img/acai-house.svg" width="110" class="rounded my-3 me-2">
 		<div class="content-w ms-2 text-start mt-4">
 			<div class="fs-6 text-start">
@@ -323,7 +327,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="d-flex m-3 store-body-w border border-gray-store border-opacity-25 rounded">
+	<div class="d-flex mx-1 mt-3 store-body-w border border-gray-store border-opacity-25 rounded">
 		<img src="./img/milk-shake.svg" width="110" class="rounded my-3 me-2">
 		<div class="content-w ms-2 text-start mt-4">
 			<div class="fs-6 text-start">
@@ -348,7 +352,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="d-flex m-3 store-body-w border border-gray-store border-opacity-25 rounded">
+	<div class="d-flex mx-1 mt-3 store-body-w border border-gray-store border-opacity-25 rounded">
 		<img src="./img/chinatown.svg" width="110" class="rounded my-3 me-2">
 		<div class="content-w ms-2 text-start mt-4">
 			<div class="fs-6 text-start">
@@ -369,11 +373,11 @@
 				</div>
 			</div>
 				<div class="d-inline-flex text-gray-store fs-store-size">
-					30-40 min • <span class="text-green ms-1">Grátis</span>
+					30-40 min • <span class="text-green ms-1">R$ 4,25</span>
 			</div>
 		</div>
 	</div>
-	<div class="d-flex m-3 store-body-w border border-gray-store border-opacity-25 rounded">
+	<div class="d-flex mx-1 mt-3 store-body-w border border-gray-store border-opacity-25 rounded">
 		<img src="./img/pizzeria-del-giorno.svg" width="110" class="rounded my-3 me-2">
 		<div class="content-w ms-2 text-start mt-4">
 			<div class="fs-6 text-start">
@@ -401,7 +405,6 @@
 </div>
 </section>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 <script src="./script.js"></script>
 </body>

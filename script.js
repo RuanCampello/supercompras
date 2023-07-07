@@ -46,27 +46,54 @@ let scrollPosition = $('.first-item').width();
 $('#discount-carousel .carousel-control-next').on('click', function(){
 	if(scrollPosition < (cWidth-(imgWidth*3))){
 		scrollPosition += imgWidth;
-		$('.carousel-inner').animate({scrollLeft: scrollPosition, behavior: 'smooth'}, 700);
+		$('.carousel-inner').animate({scrollLeft: scrollPosition, behavior: 'smooth'}, 600);
 	}
 });
 $('#discount-carousel .carousel-control-prev').on('click', function(){
 	if(scrollPosition > 0){
 		scrollPosition -= imgWidth;
-		$('.carousel-inner').animate({scrollLeft: scrollPosition, behavior: 'smooth'}, 700);
+		$('.carousel-inner').animate({scrollLeft: scrollPosition, behavior: 'smooth'}, 600);
 	}
 });
 
+/* mobile nav icons */
+const personIcon = document.getElementById('person-icon');
+const homeIcon = document.getElementById('house-icon');
+const bagIcon = document.getElementById('bag-icon');
+const profileCanvas = document.getElementById('profile-offcanvas');
+const cartCanvas = document.getElementById('cart-offcanvas');
+
 document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('scroll', function() {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 25) {
         document.querySelectorAll('.navbar-top').forEach(element => element.classList.add('fixed-top'));
+				homeIcon.classList.replace('bi-bag-fill', 'bi-bag');
         // add padding top to show content behind navbar
-        let navbar_height = document.querySelector('.navbar').offsetHeight;
-        document.body.style.paddingTop = navbar_height + 'px';
-      } else {
-        document.querySelectorAll('.navbar-top').forEach(element => element.classList.remove('fixed-top'));
-         // remove padding top from body
+        let navbarHeight = document.querySelector('.navbar').offsetHeight;
+        document.body.style.paddingTop = navbarHeight + 'px';
+      } 
+			if (window.scrollY > 250) {
+				homeIcon.classList.replace('bi-house-fill', 'bi-house');
+			}
+			else {
+				document.querySelectorAll('.navbar-top').forEach(element => element.classList.remove('fixed-top'));
+				// remove padding top from body
         document.body.style.paddingTop = '0';
+				homeIcon.classList.replace('bi-house', 'bi-house-fill');
       } 
   });
-});
+}); 
+/* profile */
+profileCanvas.addEventListener('show.bs.offcanvas', () => {
+	personIcon.classList.replace('bi-person', 'bi-person-fill');
+})
+profileCanvas.addEventListener('hidden.bs.offcanvas', () => {
+	personIcon.classList.replace('bi-person-fill', 'bi-person');
+})
+/* cart */
+cartCanvas.addEventListener('show.bs.offcanvas', () => {
+	bagIcon.classList.replace('bi-bag', 'bi-bag-fill');
+})
+cartCanvas.addEventListener('hidden.bs.offcanvas', () => {
+	bagIcon.classList.replace('bi-bag-fill', 'bi-bag');
+})

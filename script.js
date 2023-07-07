@@ -65,7 +65,7 @@ const cartCanvas = document.getElementById('cart-offcanvas');
 
 document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('scroll', function() {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 25) {
         document.querySelectorAll('.navbar-top').forEach(element => element.classList.add('fixed-top'));
 				homeIcon.classList.replace('bi-bag-fill', 'bi-bag');
         // add padding top to show content behind navbar
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			if (window.scrollY > 100) {
 				homeIcon.classList.replace('bi-house-fill', 'bi-house');
 			}
-			if(window.scrollY < 25) {
+			if(window.scrollY < 35) {
 				document.querySelectorAll('.navbar-top').forEach(element => element.classList.remove('fixed-top'));
 				// remove padding top from body
         document.body.style.paddingTop = '0';

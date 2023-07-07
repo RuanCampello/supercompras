@@ -56,6 +56,14 @@ section{
 		height: 2px;
 		background-color: var(--purple);
 	}
+	.carousel-img:hover {
+		cursor: pointer;
+		position: relative;
+		display: block;
+		-ms-transform: scale(1.02); /* IE 9 */
+		-webkit-transform: scale(1.02); /* Safari 3-8 */
+		transform: scale(1.02); 
+	}
 }
 @media screen and (min-width:992px) {
 	.carousel-inner {
@@ -126,14 +134,6 @@ section{
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-}
-.carousel-img:hover {
-	cursor: pointer;
-	position: relative;
-	display: block;
-  -ms-transform: scale(1.02); /* IE 9 */
-  -webkit-transform: scale(1.02); /* Safari 3-8 */
-  transform: scale(1.02); 
 }
 .img-wrapper {
   padding: 1%;

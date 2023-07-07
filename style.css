@@ -108,6 +108,7 @@ section{
 	}
 	#offcanvas-coupom {
 		height: 100vh;
+		width: 100vw;
 	}
 	.text .actived {
 		background-color: var(--purple);

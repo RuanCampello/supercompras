@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function(){
         let navbarHeight = document.querySelector('.navbar').offsetHeight;
         document.body.style.paddingTop = navbarHeight + 'px';
       } 
-			if (window.scrollY > 250) {
+			if (window.scrollY > 100) {
 				homeIcon.classList.replace('bi-house-fill', 'bi-house');
 			}
 			else {

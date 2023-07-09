@@ -42,23 +42,33 @@
 <!-- cart offcanvas -->
 <div class="container-fluid">
 	<div class="offcanvas offcanvas-end" data-bs-backdrop="false" tabindex="-1" id="cart-offcanvas" aria-labelledby="cart-offcanvasLabel">
-		<div class="offcanvas-header" id="cart-offcanvasLabel">
-			<h5 class="offcanvas-title" id="cart-offcanvasLabel">Carrinho de compras</h5>
-			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		<div class="offcanvas-header bg-purple border-3 border-purple mb-3 d-lg-none">
+			<div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
+				<i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
+			</div>
+			<h5 class="offcanvas-title text-light" id="profile-offcanvasLabel"></h5>
+		</div>
+		<div class="offcanvas-header d-none d-lg-block">
+			<i role="button" class="bi bi-x-lg text-purple" data-bs-dismiss="offcanvas"></i>
 		</div>
 		<div class="offcanvas-body">
-			...
+			<img src="/img/empty-bag.svg" height="300" class="mx-auto my-auto d-block">
+				<p class="fs-4 text-center mb-0	">Seu carinho está vazio</p>
+			<p class="text-center text-gray">adicione itens para realizar sua compra</p>
 		</div>
 	</div>
 </div>
 <!-- profile offcanvas -->
 <div class="container-fluid">
 	<div class="offcanvas offcanvas-end" tabindex="-1" id="profile-offcanvas" aria-labelledby="profile-offcanvasLabel" data-bs-backdrop="false">
-		<div class="offcanvas-header bg-purple border-3 border-purple mb-3">
+		<div class="offcanvas-header bg-purple border-3 border-purple mb-3 d-lg-none">
 			<div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
 				<i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
 			</div>
-			<h5 class="offcanvas-title text-light" id="profile-offcanvasLabel">Olá</h5>
+			<h5 class="offcanvas-title text-light" id="profile-offcanvasLabel"></h5>
+		</div>
+		<div class="offcanvas-header d-none d-lg-block">
+			<i role="button" class="bi bi-x-lg text-purple" data-bs-dismiss="offcanvas"></i>
 		</div>
 		<div class="offcanvas-body">
 			<div class="row d-md-none d-sm-flex">

@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
-section{
-	overflow: hidden;
-}
-:root {
-	--purple: #5e17eb;
-}
 ::selection {
-  color: #ffffff;
-  background: var(--purple);
+  color: var(--bs-white);
+  background: var(--bs-purple);
 }
 #coupom-header::selection {
-	color: var(--purple);
-	background: #ffffff;
+	color: var(--bs-purple);
+	background: var(--bs-white);
 }
 #nav {
 	z-index: 3;
@@ -42,20 +36,6 @@ section{
 		margin-right: 1%;
 		flex: 0 0 calc(100%/2.5);
 	}
-	.nav-link::after {
-		margin-top: 4px;
-		content: "";
-		position: relative;
-		width: 0%;
-		height: 2px;
-		display: block;
-		transition: all 0.5s ease;
-	}
-	.nav-link:hover::after {
-		width: 100%;
-		height: 2px;
-		background-color: var(--purple);
-	}
 	.carousel-img:hover {
 		cursor: pointer;
 		position: relative;
@@ -84,13 +64,13 @@ section{
 		margin-left: 100px;
 	}
 }
-/* store width responsive on mobile */
 .content-w {
 	min-width: 200px;
 }
 .store-body-w {
 	width: auto;
 }
+/* store width responsive on mobile */
 @media screen and (max-width: 992px){
 	.store-body-w {
 		width: 45%;
@@ -119,7 +99,7 @@ section{
 		width: 100vw;
 	}
 	.text .actived {
-		background-color: var(--purple);
+		background-color: var(--bs-purple);
 	}
 }
 .body-section {

@@ -11,7 +11,7 @@
 </head>
 <body id="theme" data-bs-theme="">
 <!-- navbar on desktop -->
-<section>
+<section class="overflow-hidden">
  <nav id="nav" class="navbar align-items-center navbar-top bg-light">
 	<div class="container-fluid">
 		<header class="mt-1">
@@ -22,15 +22,15 @@
 				</span>
 			</a>
 			<ul class="navbar-nav list-group list-group-horizontal">
-				<li class="nav-item me-3"><a href="#" class="active nav-link">Início</a></li>
-				<li class="nav-item me-3"><a href="#restaurantes" class="nav-link">Restaurantes</a></li>
-				<li class="nav-item me-3"><a href="#" class="nav-link">Bebidas</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Mercado</a></li>
+				<li class="nav-item"><a href="#" class=" nav-link mx-2 active">Início</a></li>
+				<li class="nav-item"><a href="#restaurantes" class="nav-link mx-2">Restaurantes</a></li>
+				<li class="nav-item"><a href="#" class="nav-link mx-2">Bebidas</a></li>
+				<li class="nav-item"><a href="#" class="nav-link mx-2">Mercado</a></li>
 			</ul>
 		</header>
 			<form role="search" class="input-group d-none d-md-flex" style="max-width: 27%;">
-				<i class="input-group-text bi bi-search fs-5 bg-purple text-light d-none d-lg-flex"></i>
-				<input type="text" class="form-control focus-ring focus-ring-purple" placeholder="Busque por item ou loja">
+				<i class="input-group-text bi bi-search fs-5 text-purple d-none d-md-flex"></i>
+				<input type="text" class="form-control focus-ring focus-ring-purple" placeholder="Busque itens ou lojas">
 			</form>
 				<ul class="justify-content-end list-group list-group-horizontal d-none d-md-flex">
 					<li class="list-group-item"><i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-5" onclick="setIcon()"></i></li>
@@ -113,7 +113,7 @@
 	</nav>
 </section>
 <!-- promotion rows -->
-<section>
+<section class="overflow-hidden">
 	<!-- dropdown cards -->
 <div class="container-fluid bg-purple d-none d-md-flex justify-content-center align-items-center p-2">
 	<img src="img/coupom.svg" height="35">
@@ -202,7 +202,7 @@
 </div>
 </section>
 <!-- carousel multiple items -->
-<section>
+<section class="overflow-hidden">
 	<div id="discount-carousel" class="carousel container-fluid p-0" data-bs-ride="carousel">
 		<ol class="carousel-indicators d-md-none d-sm-flex m-0">
 			<button type="button" data-bs-target="#discount-carousel" class="active" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
@@ -233,7 +233,7 @@
 	</div>
 </section>
 <!-- stores -->
-<section class="body-section">
+<section class="body-section overflow-hidden">
 	<div class="row justify-content-center" id="restaurantes">
 		<h4 class="ms-5 mt-3">Lojas</h4>
 		<div class="d-flex mx-1 mt-3 store-body-w border border-gray-store border-opacity-25 rounded">

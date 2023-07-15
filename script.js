@@ -31,12 +31,15 @@ const setIcon = function () {
 	}
 }
 // icon toggler offcanvas 
+const offcanvasCoupom = document.getElementById('offcanvas-coupom');
 let iconOffCanvas = document.getElementById('icon-offcanvas');
 const iconCanvasToggler = function () {
 	iconOffCanvas.classList.toggle('bi-chevron-up');
 }
-const offcanvasCoupom = document.getElementById('offcanvas-coupom');
-offcanvasCoupom.addEventListener('hidden.bs.offcanvas', () => {
+offcanvasCoupom.addEventListener('show.bs.offcanvas', () => {
+	iconCanvasToggler();
+});
+offcanvasCoupom.addEventListener('hide.bs.offcanvas', () => {
 	iconCanvasToggler(); //if offcanvas has closed by backdrop hidden.bs.offcanvas will toggle the icon anyway
 });
 // carousel controller 

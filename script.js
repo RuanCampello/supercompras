@@ -40,7 +40,7 @@ offcanvasCoupom.addEventListener('show.bs.offcanvas', () => {
 	iconCanvasToggler();
 });
 offcanvasCoupom.addEventListener('hide.bs.offcanvas', () => {
-	iconCanvasToggler(); //if offcanvas has closed by backdrop hidden.bs.offcanvas will toggle the icon anyway
+	iconCanvasToggler(); //if offcanvas has closed by backdrop, hide.bs.offcanvas will toggle the icon anyway
 });
 // carousel controller 
 let cWidth = $('.carousel-inner')[0].scrollWidth;

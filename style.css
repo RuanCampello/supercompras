@@ -8,6 +8,10 @@
 	color: var(--bs-purple);
 	background: var(--bs-white);
 }
+#searchForm {
+	min-width: 26%; 
+	max-width: 34%;
+}
 #nav {
 	z-index: 3;
 }

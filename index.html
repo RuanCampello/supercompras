@@ -28,12 +28,12 @@
 				<li class="nav-item"><a href="#" class="nav-link mx-2">Mercado</a></li>
 			</ul>
 		</header>
-			<form role="search" class="d-none d-md-flex align-items-center" style="min-width: 27%;">
+			<form id="searchForm" role="search" class="d-none d-md-flex align-items-center">
 				<label for="searchInput" class="bi bi-search fs-5 text-purple d-none d-md-flex position-absolute ms-3"></label>
 				<input id="searchInput" type="text" class="p-2 ps-5 border-2 border-purple form-control focus-ring focus-ring-purple" placeholder="Busque itens ou lojas">
 			</form>
 				<ul class="justify-content-end list-group list-group-horizontal d-none d-md-flex">
-					<li class="list-group-item"><i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-5" onclick="setIcon()"></i></li>
+					<li class="ms-1 list-group-item"><i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-5" onclick="setIcon()"></i></li>
 					<li class="list-group-item"><i role="button" class="bi bi-person-fill fs-5 mt-1" data-bs-toggle="offcanvas" data-bs-target="#profile-offcanvas" aria-controls="profile-offcanvas"></i></li>
 					<li class="list-group-item"><i role="button" data-bs-toggle="offcanvas" data-bs-target="#cart-offcanvas" aria-controls="cart-offcanvas" class="bi bi-cart4 bag fs-5"></i></li>
 				</ul>

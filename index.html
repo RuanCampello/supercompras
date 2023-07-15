@@ -28,9 +28,9 @@
 				<li class="nav-item"><a href="#" class="nav-link mx-2">Mercado</a></li>
 			</ul>
 		</header>
-			<form role="search" class="input-group d-none d-md-flex" style="max-width: 27%;">
-				<i class="input-group-text bi bi-search fs-5 text-purple d-none d-md-flex"></i>
-				<input type="text" class="form-control focus-ring focus-ring-purple" placeholder="Busque itens ou lojas">
+			<form role="search" class="d-none d-md-flex align-items-center" style="min-width: 27%;">
+				<label for="searchInput" class="bi bi-search fs-5 text-purple d-none d-md-flex position-absolute ms-3"></label>
+				<input id="searchInput" type="text" class="p-2 ps-5 border-2 border-purple form-control focus-ring focus-ring-purple" placeholder="Busque itens ou lojas">
 			</form>
 				<ul class="justify-content-end list-group list-group-horizontal d-none d-md-flex">
 					<li class="list-group-item"><i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-5" onclick="setIcon()"></i></li>

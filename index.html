@@ -42,13 +42,13 @@
 <!-- cart offcanvas -->
 <div class="container-fluid">
 	<div class="offcanvas offcanvas-end" data-bs-backdrop="false" tabindex="-1" id="cart-offcanvas" aria-labelledby="cart-offcanvasLabel">
-		<div class="offcanvas-header bg-purple border-3 border-purple mb-3 d-lg-none">
+		<div class="offcanvas-header bg-purple border-3 border-purple mb-3 d-lg-none ps-3">
 			<div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
 				<i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
 			</div>
 			<h5 class="offcanvas-title text-light" id="profile-offcanvasLabel"></h5>
 		</div>
-		<div class="offcanvas-header d-none d-lg-block">
+		<div class="offcanvas-header d-none d-lg-block ms-3">
 			<i role="button" class="bi bi-x-lg text-purple" data-bs-dismiss="offcanvas"></i>
 		</div>
 		<div class="offcanvas-body">
@@ -61,23 +61,33 @@
 <!-- profile offcanvas -->
 <div class="container-fluid">
 	<div class="offcanvas offcanvas-end" tabindex="-1" id="profile-offcanvas" aria-labelledby="profile-offcanvasLabel" data-bs-backdrop="false">
-		<div class="offcanvas-header bg-purple border-3 border-purple mb-3 d-lg-none">
+		<div class="offcanvas-header bg-purple border-3 border-purple d-lg-none ps-3">
 			<div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
 				<i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
 			</div>
 			<h5 class="offcanvas-title text-light" id="profile-offcanvasLabel"></h5>
 		</div>
-		<div class="offcanvas-header d-none d-lg-block">
+		<div class="offcanvas-header d-none d-lg-block ms-3">
 			<i role="button" class="bi bi-x-lg text-purple" data-bs-dismiss="offcanvas"></i>
 		</div>
 		<div class="offcanvas-body">
-			<div class="row d-md-none d-sm-flex">
-				<a role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-coupom" data-bs-dismiss="offcanvas-coupom"
-				aria-controls="offcanvas-coupom"><i class="bi bi-ticket-perforated"></i>
-				<hr class="border rounded border-2 border-purple opacity-75">
-			</a>
-			</div>
+			<table class="table">
+				<tr class="d-md-none d-sm-flex" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-coupom" data-bs-dismiss="offcanvas-coupom"
+				aria-controls="offcanvas-coupom">
+				<td>
+					<i class="ms-4 bi bi-ticket-perforated fs-1"></i>
+				</td>
+				<td>
+						<span class="fs-4">Cupons</span><br>
+						<span class="text-gray-store">Meus cupons de desconto</span>
+				</td>
+				<td>
+					<i class="bi bi-chevron-right fs-3"></i>
+				</td>
+				</tr>
+			</table>
 		</div>
+	</div>
 	</div>
 </div>
 </section>
@@ -127,7 +137,7 @@
 	</div>
 </div>
 <div class="offcanvas offcanvas-w offcanvas-bottom overflow-auto" data-bs-scroll="false" data-bs-backdrop="false" tabindex="-1" id="offcanvas-coupom" aria-labelledby="offcanvas-coupomLabel">
-  <div id="offcanvas-coupom-header" class="offcanvas-header bg-purple d-md-none d-sm-block">
+  <div id="offcanvas-coupom-header" class="offcanvas-header bg-purple d-md-none d-sm-block ps-3">
 		<div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
 			<i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
 		</div>

@@ -9,7 +9,6 @@ const carouselBtn = document.querySelectorAll('.carousel-light');
 const shipping = document.querySelectorAll('.text-green');
 const cardBackground = document.querySelectorAll('.btn-outline-purple');
 const nav = document.querySelectorAll('.navbar');
-
 const buttonOutlineToggler = function (event) {
 	if(event === 'light'){
 		carouselBtn.forEach(element => element.classList.replace('carousel-dark', 'carousel-light'));
@@ -74,20 +73,13 @@ const cartCanvas = document.getElementById('cart-offcanvas');
 
 document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('scroll', function() {
-      if (window.scrollY > 100) {
-        document.querySelectorAll('.navbar-top').forEach(element => element.classList.add('fixed-top'));
+      if (window.scrollY > 140) {
 				homeIcon.classList.replace('bi-bag-fill', 'bi-bag');
-        // add padding top to show content behind navbar
-        let navbarHeight = document.querySelector('.navbar').offsetHeight;
-        document.body.style.paddingTop = navbarHeight + 'px';
       } 
 			if (window.scrollY > 100) {
 				homeIcon.classList.replace('bi-house-fill', 'bi-house');
 			}
-			if(window.scrollY < 35) {
-				document.querySelectorAll('.navbar-top').forEach(element => element.classList.remove('fixed-top'));
-				// remove padding top from body
-        document.body.style.paddingTop = '0';
+			if(window.scrollY < 150) {
 				homeIcon.classList.replace('bi-house', 'bi-house-fill');
       } 
   });

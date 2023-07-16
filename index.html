@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
 <body id="theme" data-bs-theme="">
 <!-- navbar on desktop -->
 <section class="overflow-hidden">
- <nav id="nav" class="navbar align-items-center navbar-top bg-light">
+ <nav id="nav" class="navbar align-items-center fixed-top bg-light">
 	<div class="container-fluid">
 		<header class="mt-1">
 			<a href="#" class="navbar-brand float-start d-none d-lg-flex">
@@ -40,7 +40,7 @@
 	</div>
  </nav>
 <!-- cart offcanvas -->
-<div class="container-fluid">
+<div class="container-fluid mt-5">
 	<div class="offcanvas offcanvas-end" data-bs-backdrop="false" tabindex="-1" id="cart-offcanvas" aria-labelledby="cart-offcanvasLabel">
 		<div class="offcanvas-header bg-purple border-3 border-purple mb-3 d-lg-none ps-3">
 			<div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
@@ -148,9 +148,9 @@
 <!-- promotion rows -->
 <section class="overflow-hidden">
 	<!-- dropdown cards -->
-<div class="container-fluid bg-purple d-none d-md-flex justify-content-center align-items-center p-2">
+<div id="coupon-div" class="container-fluid bg-purple d-none d-md-flex justify-content-center align-items-center mb-2 mt-3">
 	<img src="img/coupom.svg" height="35">
-	<h6 id="coupom-header" class="mt-2 mx-4 text-light fw-medium" style="font-family: 'Arimo', sans-serif;">
+	<h6 id="coupom-header" class="mt-2 mx-4 text-light fw-medium py-2" style="font-family: 'Arimo', sans-serif;">
 		Você tem 3 cupons! Aproveite seus descontos
 	</h6>
 	<div>
@@ -199,11 +199,12 @@
 							<a role="button" href="#" class="btn container-fluid btn-outline-purple fw-semibold link">Ver lojas</a>
 						<div class="row mt-2">
 							<a href="#" class="col text-start link-purple fw-semibold text-decoration-none">Ver regras</a>
-							<p class="col text-end text-gray">Válido até 23/06</p>
+							<p class="col text-end text-gray" lang="pt-BR">Válido até 23/06</p>
+							<p class="cal text-end text-gray" lang="en">Valid util 23/06</p>
 						</div>
 					</div>
 					<div class="card-footer text-center">
-						<h6 class="text-gray fs-footer">
+						<h6 class="text-gray fs-footer" lang="pt-BR">
 							O cupom será aplicado no pagamento
 						</h6>
 					</div>
@@ -266,7 +267,7 @@
 	</div>
 </section>
 <!-- stores -->
-<section class="body-section overflow-hidden">
+<section class="mb-5 overflow-hidden body-section">
 	<div class="row justify-content-center" id="restaurantes">
 		<h4 class="ms-5 mt-3">Lojas</h4>
 		<div class="d-flex mx-1 mt-3 store-body-w border border-gray-store border-opacity-25 rounded">
@@ -448,6 +449,54 @@
 	</div>
 </div>
 </section>
+<footer class="border-top overflow-hidden d-none d-md-flex">
+	<div class="container-fluid">
+			<div class="row gy-4 gx-5">
+					<div class="col-lg-2 col-md-3 pt-5 p-0">
+							<img src="./img/logo.svg" height="50" class="ms-4">
+							<p class="small text-muted mb-0 ms-4" style="text-justify: auto;">&copy; Copyrights 2023 - SuperCompras - Todos os direitos reservados. <a class="text-primary" href="#"></a></p>
+					</div>
+					<div class="col-lg-3 col-md-2 pt-5 text-center">
+						<h5 class="m-0">Idioma</h5>
+						<h6 class="mb-3 text-muted">Language</h6>
+						<ul class="list-unstyled">
+								<li class="justify-content-center d-flex mb-3 float-start container-fluid"><img src="./img/br-flag.svg" height="35" class="me-3"><a class="link-green text-decoration-none d-flex align-items-center btn disabled" href="#">Português</a>
+								</li>
+									<li class="justify-content-center d-flex float-start container-fluid"><img src="./img/uk-flag.svg" height="35" class="me-3"><a class="text-decoration-none d-flex align-items-center btn btn-outline-orange" href="#">English</a>
+									</li>
+							</ul>
+					</div>
+					<div class="col-lg-3 col-md-2 pt-5 text-center">
+							<h5 class="mb-3">Quick links</h5>
+							<ul class="list-unstyled text-muted">
+									<li><a href="#">Home</a></li>
+									<li><a href="#">About</a></li>
+									<li><a href="#">Get started</a></li>
+									<li><a href="#">FAQ</a></li>
+							</ul>
+					</div>
+					<div class="col-lg-4 col-md-5 bg-purple pt-5 text-light" id="contact-us">
+							<h5 class="contactUsSection d-flex justify-content-center align-items-center pb-2">Contate-nos!</h5>
+							<p class="small contactUsSection"></p>
+							<form class="pb-3" action="https://formsubmit.co/7280cb5fc1fa71630988012fe43ffdfc" method="POST">
+								<input type="hidden" name="_captcha" value="false">
+								<input type="hidden" name="_template" value="box">
+								<div class="form-floating mb-3">
+									<input name="name" type="text" class="form-control focus-ring focus-ring-orange border-0" id="floatingInput" placeholder="" required>
+									<label for="floatingName" class="text-gray">Nome</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input name="email" type="email" class="form-control focus-ring focus-ring-orange border-0" id="floatingEmail" placeholder="" required>
+									<label for="floatingEmail" class="text-gray">Email</label>
+								</div>
+								<textarea name="message" id="floatingText" class="form-control focus-ring focus-ring-orange border-1 border-orange mb-3" type="email" placeholder="Escreva sua mensagem aqui!" required></textarea>
+									<button class="btn btn-orange justify-content-center align-items-center border-white border-2 container-fluid text-white py-1 fs-5" type="submit">Enviar</button>
+								</div>
+							</form>
+					</div>
+			</div>
+	</div>
+</footer>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 <script src="./script.js"></script>

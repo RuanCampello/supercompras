@@ -1,5 +1,6 @@
 // icon and theme changer
 const icon = document.getElementById('toggle-btn');
+const iconMobile = document.getElementById('toggle-btn-mobile');
 const themeChanger = document.getElementById('theme');
 const buttonPurple = document.querySelectorAll('.btn-outline-purple');
 const textPurple = document.querySelectorAll('.text-purple');
@@ -7,8 +8,8 @@ const storeText = document.querySelectorAll('.store-text');
 const carouselBtn = document.querySelectorAll('.carousel-light');
 const shipping = document.querySelectorAll('.text-green');
 const cardBackground = document.querySelectorAll('.btn-outline-purple');
+const nav = document.querySelectorAll('.navbar');
 
-let nav = document.querySelectorAll('.navbar');
 const buttonOutlineToggler = function (event) {
 	if(event === 'light'){
 		carouselBtn.forEach(element => element.classList.replace('carousel-dark', 'carousel-light'));
@@ -25,7 +26,8 @@ const buttonOutlineToggler = function (event) {
 };
 const setIcon = function () {
 	icon.classList.toggle('bi-moon')
-	if(icon.classList[3] === 'bi-moon') {
+	iconMobile.classList.toggle('bi-moon')
+	if(icon.classList.contains('bi-moon') || iconMobile.classList.contains('bi-moon')) {
 		themeChanger.setAttribute('data-bs-theme', 'dark');
 		buttonOutlineToggler('dark');
 	}
@@ -72,7 +74,7 @@ const cartCanvas = document.getElementById('cart-offcanvas');
 
 document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('scroll', function() {
-      if (window.scrollY > 25) {
+      if (window.scrollY > 100) {
         document.querySelectorAll('.navbar-top').forEach(element => element.classList.add('fixed-top'));
 				homeIcon.classList.replace('bi-bag-fill', 'bi-bag');
         // add padding top to show content behind navbar

@@ -35,18 +35,19 @@ $custom-font-sizes: (
   "footer": 12px,
   );
   /* $max-75: max-width */
-  $navbar-light-active-color: $purple;
-  $input-focus-border-color: $purple;
-  $theme-colors: map-merge($custom-theme-colors,$theme-colors);
-  $font-sizes: map-merge($custom-font-sizes,$font-sizes);
-  $input-border-radius: 20px;
-  $input-placeholder-color: #707070;
-  $table-cell-vertical-align: middle;
-  $table-border-color: #5e17eb;
-  $table-border-width: 2px;
-  $table-cell-padding-y: 1.25rem;
-  $table-cell-padding-x: 0;
-  $offcanvas-padding-x: 0;
+$navbar-light-active-color: $purple;
+$input-focus-border-color: $purple;
+$theme-colors: map-merge($custom-theme-colors,$theme-colors);
+$font-sizes: map-merge($custom-font-sizes, $font-sizes);
+$input-border-radius: 20px;
+$input-placeholder-color: #707070;
+$table-cell-vertical-align: middle;
+$table-border-color: #5e17eb;
+$table-border-width: 2px;
+$table-cell-padding-y: 1.25rem;
+$table-cell-padding-x: 0;
+$offcanvas-padding-x: 0;
+$offcanvas-padding-y: 0;
 
   @import "../node_modules/bootstrap/scss/bootstrap.scss";
   

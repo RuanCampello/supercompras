@@ -15,6 +15,9 @@
 #nav {
 	z-index: 3;
 }
+.offcanvas-header {
+	padding: 1rem 0 1rem;
+}
 .border-gray-store:hover {
 	transition: 0.4s all ease-in-out;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -61,11 +64,13 @@
 	#offcanvas-coupom {
 		height: 50vh;
 	}
-	.body-section {
-		margin: 0 200px 0 200px;
-	}
 	.first-item {
 		margin-left: 100px;
+	}
+}
+@media screen and (min-width:1200px) {
+	.body-section {
+		margin: 0 170px 0 170px;
 	}
 }
 .content-w {

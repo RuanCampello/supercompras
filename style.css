@@ -8,8 +8,11 @@
 	color: var(--bs-purple);
 	background: var(--bs-white);
 }
-.contactUsSection::selection {
+.contactUsSection::selection, .link-purple::selection {
 	background-color: var(--bs-orange);
+}
+.social-media {
+	cursor: pointer;
 }
 .btn-outline-orange:hover {
 	color: var(--bs-white);
@@ -74,11 +77,11 @@
 	.first-item {
 		margin-left: 100px;
 	}
-	footer {
-		padding: 0 10% 0 10%;
-	}
 }
 @media screen and (min-width:1200px) {
+	.footer-body {
+		padding: 0 10% 0 10%;
+	}
 	.body-section {
 		margin: 0 170px 0 170px;
 	}

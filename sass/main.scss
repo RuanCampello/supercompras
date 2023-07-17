@@ -29,6 +29,8 @@ $custom-theme-colors: (
   "yellow": #f49f0a,
   "green": #50C878,
   "white": #ffffff,
+  "red-royal": #d21d2c,
+  "amazon-green": #009846,
   );
 $custom-font-sizes: (
   "store-size": 14px,
@@ -48,7 +50,7 @@ $table-cell-padding-y: 1.25rem;
 $table-cell-padding-x: 0;
 $offcanvas-padding-x: 0;
 $offcanvas-padding-y: 0;
-
+$form-floating-padding-x: 15px;
 
   @import "../node_modules/bootstrap/scss/bootstrap.scss";
   

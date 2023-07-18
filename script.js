@@ -8,33 +8,41 @@ const storeText = document.querySelectorAll('.store-text');
 const carouselBtn = document.querySelectorAll('.carousel-light');
 const shipping = document.querySelectorAll('.text-green');
 const cardBackground = document.querySelectorAll('.btn-outline-purple');
+
 const nav = document.querySelectorAll('.navbar');
 const buttonOutlineToggler = function (event) {
 	if(event === 'light'){
+		localStorage.setItem('theme', 'light')
 		carouselBtn.forEach(element => element.classList.replace('carousel-dark', 'carousel-light'));
 		cardBackground.forEach(element => element.classList.replace('btn-purple', 'btn-outline-purple'));
 		shipping.forEach(element => element.classList.replace('text-orange', 'text-green'));
 		nav.forEach(element => element.classList.replace('bg-dark', 'bg-light'));
 	}
 	else if(event === 'dark'){
+		localStorage.setItem('theme', 'dark')
 		carouselBtn.forEach(element => element.classList.replace('carousel-light', 'carousel-dark'));
 		cardBackground.forEach(element => element.classList.replace('btn-outline-purple', 'btn-purple'));
 		shipping.forEach(element => element.classList.replace('text-green', 'text-orange'));
 		nav.forEach(element => element.classList.replace('bg-light', 'bg-dark'));
+		icon.classList.add('bi-moon')
+		iconMobile.classList.add('bi-moon')
 	}
-};
-const setIcon = function () {
+}
+buttonOutlineToggler(localStorage.getItem('theme'))
+function setTheme () {
+	themeChanger.setAttribute('data-bs-theme', localStorage.getItem('theme'));
+}
+function setIcon () {
 	icon.classList.toggle('bi-moon')
 	iconMobile.classList.toggle('bi-moon')
 	if(icon.classList.contains('bi-moon') || iconMobile.classList.contains('bi-moon')) {
-		themeChanger.setAttribute('data-bs-theme', 'dark');
 		buttonOutlineToggler('dark');
 	}
 	else {
-		themeChanger.setAttribute('data-bs-theme', 'light');
 		buttonOutlineToggler('light');
 	}
 }
+setTheme()
 // icon toggler offcanvas 
 const offcanvasCoupom = document.getElementById('offcanvas-coupom');
 let iconOffCanvas = document.getElementById('icon-offcanvas');

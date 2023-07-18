@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="./style.css">
 	<title>Super Compras</title>
 </head>
-<body id="theme" data-bs-theme="">
+<body id="theme" data-bs-theme="auto">
 <!-- navbar on desktop -->
 <section class="overflow-hidden">
  <nav id="nav" class="navbar align-items-center fixed-top bg-light">
@@ -33,7 +33,7 @@
 				<input id="searchInput" type="text" class="p-2 ps-5 border-2 border-purple form-control focus-ring focus-ring-purple" placeholder="Busque itens ou lojas">
 			</form>
 				<ul class="justify-content-end list-group list-group-horizontal d-none d-md-flex">
-					<li class="ms-1 list-group-item"><i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-5" onclick="setIcon()"></i></li>
+					<li class="ms-1 list-group-item"><i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-5" onclick="setIcon(), setTheme()"></i></li>
 					<li class="list-group-item"><i role="button" class="bi bi-person-fill fs-5 mt-1" data-bs-toggle="offcanvas" data-bs-target="#profile-offcanvas" aria-controls="profile-offcanvas"></i></li>
 					<li class="list-group-item"><i role="button" data-bs-toggle="offcanvas" data-bs-target="#cart-offcanvas" aria-controls="cart-offcanvas" class="bi bi-bag-fill bag fs-5"></i></li>
 				</ul>
@@ -85,7 +85,7 @@
 					<i class="bi bi-chevron-right fe-3 float-end fs-3 me-3"></i>
 				</td>
 				</tr>
-				<tr class="d-md-none d-sm-flex" role="button" onclick="setIcon()">
+				<tr class="d-md-none d-sm-flex" role="button" onclick="setIcon(), setTheme()">
 				<td>
 					<i class="bi bi-brightness-high-fill ms-3 fs-3" id="toggle-btn-mobile"></i>
 				</td>

@@ -8,6 +8,7 @@ const storeText = document.querySelectorAll('.store-text');
 const carouselBtn = document.querySelectorAll('.carousel-light');
 const shipping = document.querySelectorAll('.text-green');
 const cardBackground = document.querySelectorAll('.btn-outline-purple');
+const linkTheme = document.querySelectorAll('.link-dark');
 
 const nav = document.querySelectorAll('.navbar');
 function buttonOutlineToggler(event) {
@@ -17,6 +18,7 @@ function buttonOutlineToggler(event) {
 		cardBackground.forEach(element => element.classList.replace('btn-purple', 'btn-outline-purple'));
 		shipping.forEach(element => element.classList.replace('text-orange', 'text-green'));
 		nav.forEach(element => element.classList.replace('bg-dark', 'bg-light'));
+		linkTheme.forEach(element => element.classList.replace('link-light-gray', 'link-dark'));
 	}
 	else if(event === 'dark'){
 		localStorage.setItem('theme', 'dark')
@@ -24,6 +26,7 @@ function buttonOutlineToggler(event) {
 		cardBackground.forEach(element => element.classList.replace('btn-outline-purple', 'btn-purple'));
 		shipping.forEach(element => element.classList.replace('text-green', 'text-orange'));
 		nav.forEach(element => element.classList.replace('bg-light', 'bg-dark'));
+		linkTheme.forEach(element => element.classList.replace('link-dark', 'link-light-gray'));
 		icon.classList.add('bi-moon')
 		/* iconMobile.classList.add('bi-moon') */
 	}

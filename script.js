@@ -1,6 +1,6 @@
 // icon and theme changer
 const icon = document.getElementById('toggle-btn');
-const iconMobile = document.getElementById('toggle-btn-mobile');
+/* const iconMobile = document.getElementById('toggle-btn-mobile'); */
 const themeChanger = document.getElementById('theme');
 const buttonPurple = document.querySelectorAll('.btn-outline-purple');
 const textPurple = document.querySelectorAll('.text-purple');
@@ -10,7 +10,7 @@ const shipping = document.querySelectorAll('.text-green');
 const cardBackground = document.querySelectorAll('.btn-outline-purple');
 
 const nav = document.querySelectorAll('.navbar');
-const buttonOutlineToggler = function (event) {
+function buttonOutlineToggler(event) {
 	if(event === 'light'){
 		localStorage.setItem('theme', 'light')
 		carouselBtn.forEach(element => element.classList.replace('carousel-dark', 'carousel-light'));
@@ -25,7 +25,7 @@ const buttonOutlineToggler = function (event) {
 		shipping.forEach(element => element.classList.replace('text-green', 'text-orange'));
 		nav.forEach(element => element.classList.replace('bg-light', 'bg-dark'));
 		icon.classList.add('bi-moon')
-		iconMobile.classList.add('bi-moon')
+		/* iconMobile.classList.add('bi-moon') */
 	}
 }
 buttonOutlineToggler(localStorage.getItem('theme'))
@@ -34,8 +34,9 @@ function setTheme () {
 }
 function setIcon () {
 	icon.classList.toggle('bi-moon')
-	iconMobile.classList.toggle('bi-moon')
-	if(icon.classList.contains('bi-moon') || iconMobile.classList.contains('bi-moon')) {
+	// iconMobile.classList.toggle('bi-moon')
+/* 	if(icon.classList.contains('bi-moon') || iconMobile.classList.contains('bi-moon')) */ 
+	if(icon.classList.contains('bi-moon')){
 		buttonOutlineToggler('dark');
 	}
 	else {

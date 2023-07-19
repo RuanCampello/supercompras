@@ -11,18 +11,18 @@
 </head>
 <body id="theme" data-bs-theme="auto">
 <!-- navbar on desktop -->
-<section class="overflow-hidden d-lg-flex d-none">
- <nav id="nav" class="navbar align-items-center fixed-top bg-light">
+<section class="overflow-hidden">
+ <nav id="nav" class="navbar align-items-center fixed-top bg-light d-md-flex d-none">
 	<div class="container-fluid">
 		<header class="mt-1">
-			<a href="#" class="navbar-brand float-start d-none d-lg-flex">
+			<a href="../index.html" class="navbar-brand float-start d-none d-lg-flex">
 				<img src="../img/logo.svg" width="35">
 				<span class="ms-3" style="font-family: 'Caprasimo', cursive;">
 					S<span class="text-purple">upe</span>r Compras
 				</span>
 			</a>
 			<ul class="navbar-nav list-group list-group-horizontal">
-				<li class="nav-item"><a href="#" class=" nav-link mx-2 active">Início</a></li>
+				<li class="nav-item"><a href="../index.html" class=" nav-link mx-2">Início</a></li>
 				<li class="nav-item"><a href="#restaurantes" class="nav-link mx-2">Restaurantes</a></li>
 				<li class="nav-item"><a href="#" class="nav-link mx-2">Bebidas</a></li>
 				<li class="nav-item"><a href="#" class="nav-link mx-2">Mercado</a></li>
@@ -33,108 +33,109 @@
 				<input id="searchInput" type="text" class="p-2 ps-5 border-2 border-purple form-control focus-ring focus-ring-purple" placeholder="Busque itens ou lojas">
 			</form>
 				<ul class="justify-content-end list-group list-group-horizontal d-none d-md-flex">
-<!-- 					<li class="ms-1 list-group-item"><i id="toggle-btn" role="button" class="bi bi-brightness-high-fill fs-5" onclick="setIcon(), setTheme()"></i></li> -->
 					<li class="list-group-item"><i role="button" class="bi bi-person-fill fs-5 mt-1" data-bs-toggle="offcanvas" data-bs-target="#profile-offcanvas" aria-controls="profile-offcanvas"></i></li>
 					<li class="list-group-item"><i role="button" data-bs-toggle="offcanvas" data-bs-target="#cart-offcanvas" aria-controls="cart-offcanvas" class="bi bi-bag-fill bag fs-5"></i></li>
 				</ul>
 	</div>
  </nav>
-<!-- cart offcanvas -->
-<div class="container-fluid mt-5">
-	<div class="offcanvas offcanvas-end" data-bs-backdrop="false" tabindex="-1" id="cart-offcanvas" aria-labelledby="cart-offcanvasLabel">
-		<div class="offcanvas-header bg-purple border-3 border-purple mb-3 d-lg-none ps-3">
-			<div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
-				<i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
-			</div>
-			<h5 class="offcanvas-title text-light" id="profile-offcanvasLabel"></h5>
-		</div>
-		<div class="offcanvas-header d-none d-lg-block ms-3">
-			<i role="button" class="bi bi-x-lg text-purple" data-bs-dismiss="offcanvas"></i>
-		</div>
-		<div class="offcanvas-body">
-			<img src="/img/empty-bag.svg" height="300" class="mx-auto my-auto d-block">
-				<p class="fs-4 text-center mb-0	">Sua sacola está vazia</p>
-			<p class="text-center text-gray">adicione itens para realizar sua compra</p>
-		</div>
-	</div>
-</div>
-<!-- profile offcanvas -->
-<div class="container-fluid">
-	<div class="offcanvas offcanvas-end" tabindex="-1" id="profile-offcanvas" aria-labelledby="profile-offcanvasLabel" data-bs-backdrop="false">
-		<div class="offcanvas-header bg-purple border-3 border-purple d-lg-none ps-3">
-			<div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
-				<i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
-			</div>
-			<h5 class="offcanvas-title text-light" id="profile-offcanvasLabel"></h5>
-		</div>
-		<div class="offcanvas-header d-none d-lg-block ms-3">
-			<i role="button" class="bi bi-x-lg text-purple" data-bs-dismiss="offcanvas"></i>
-		</div>
-		<div class="offcanvas-body">
-			<table class="table">
-				<tr class="d-md-none d-sm-flex" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-coupom" data-bs-dismiss="offcanvas-coupom"
-				aria-controls="offcanvas-coupom">
-				<td>
-					<i class="bi bi-ticket-perforated ms-3 fs-3 me-3"></i>
-				</td>
-				<td>
-						<span class="fs-4">Cupons</span><br>
-						<span class="text-gray-store">Meus cupons de desconto</span>
-				</td>
-				<td>
-					<i class="bi bi-chevron-right fe-3 float-end fs-3 me-3"></i>
-				</td>
-				<tr>
-				<td>
-					<i class="bi bi-credit-card ms-3 fs-3"></i>
-				</td>
-				<td>
-						<span class="fs-4">Pagamento</span><br>
-						<span class="text-gray-store">Minhas formas de pagamento</span>
-				</td>
-				<td>
-					<i class="bi bi-chevron-right fs-3 float-end me-3"></i>
-				</td>
-				</tr>
-				<tr class="d-md-none d-sm-flex">
-					<td>
-						<i class="bi bi-translate ms-3 fs-3"></i>
-					</td>
-					<td>
-						<span class="fs-4">Idioma</span><br>
-						<span class="text-gray-store">Selecione o idioma do site</span>
-					</td>
-					<td>
-						<div class="dropdown">
-							<button class="btn btn-outline-amazon-green" type="button" data-bs-toggle="dropdown">PT-BR</button>
-							<ul class="dropdown-menu">
-								<li class="bg-amazon-green"><a href="#" class="dropdown-item text-light disabled">Português</a></li>
-								<li><a href="../en.html" class="dropdown-item">English</a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-			<tr role="button" onclick="setIcon(), setTheme()">
-			<td>
-				<i id="toggle-btn" class="bi bi-brightness-high-fill ms-3 fs-3" id="toggle-btn-mobile"></i>
-			</td>
-			<td>
-				<span class="fs-4">Tema</span><br>
-				<span class="text-gray-store">Alterne entre claro e noturno</span>
-			</td>
-			<td>
-			</td>
-			</tr>
-			</table>
-		</div>
-	</div>
-</div>
 </section>
+<!-- cart offcanvas -->
+<secction class="offcanvas-section">
+  <div class="container-fluid">
+    <div class="offcanvas offcanvas-end" data-bs-backdrop="false" tabindex="-1" id="cart-offcanvas" aria-labelledby="cart-offcanvasLabel">
+      <div class="offcanvas-header bg-purple border-3 border-purple mb-3 d-lg-none ps-3">
+        <div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
+          <i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
+        </div>
+        <h5 class="offcanvas-title text-light" id="profile-offcanvasLabel"></h5>
+      </div>
+      <div class="offcanvas-header d-none d-lg-block ms-3">
+        <i role="button" class="bi bi-x-lg text-purple" data-bs-dismiss="offcanvas"></i>
+      </div>
+      <div class="offcanvas-body">
+        <img src="/img/empty-bag.svg" height="300" class="mx-auto my-auto d-block">
+          <p class="fs-4 text-center mb-0	">Sua sacola está vazia</p>
+        <p class="text-center text-gray">adicione itens para realizar sua compra</p>
+      </div>
+    </div>
+  </div>
+  <!-- profile offcanvas -->
+  <div class="container-fluid">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="profile-offcanvas" aria-labelledby="profile-offcanvasLabel" data-bs-backdrop="false">
+      <div class="offcanvas-header bg-purple border-3 border-purple d-lg-none ps-3">
+        <div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
+          <i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
+        </div>
+        <h5 class="offcanvas-title text-light" id="profile-offcanvasLabel"></h5>
+      </div>
+      <div class="offcanvas-header d-none d-lg-block ms-3">
+        <i role="button" class="bi bi-x-lg text-purple" data-bs-dismiss="offcanvas"></i>
+      </div>
+      <div class="offcanvas-body">
+        <table class="table">
+          <tr class="d-md-none d-sm-flex" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-coupom" data-bs-dismiss="offcanvas-coupom"
+          aria-controls="offcanvas-coupom">
+          <td>
+            <i class="bi bi-ticket-perforated ms-3 fs-3 me-3"></i>
+          </td>
+          <td>
+              <span class="fs-4">Cupons</span><br>
+              <span class="text-gray-store">Meus cupons de desconto</span>
+          </td>
+          <td>
+            <i class="bi bi-chevron-right fe-3 float-end fs-3 me-3"></i>
+          </td>
+          <tr>
+          <td>
+            <i class="bi bi-credit-card ms-3 fs-3"></i>
+          </td>
+          <td>
+              <span class="fs-4">Pagamento</span><br>
+              <span class="text-gray-store">Minhas formas de pagamento</span>
+          </td>
+          <td>
+            <i class="bi bi-chevron-right fs-3 float-end me-3"></i>
+          </td>
+          </tr>
+          <tr class="d-md-none d-sm-flex">
+            <td>
+              <i class="bi bi-translate ms-3 fs-3"></i>
+            </td>
+            <td>
+              <span class="fs-4">Idioma</span><br>
+              <span class="text-gray-store">Selecione o idioma do site</span>
+            </td>
+            <td>
+              <div class="dropdown">
+                <button class="btn btn-outline-amazon-green" type="button" data-bs-toggle="dropdown">PT-BR</button>
+                <ul class="dropdown-menu">
+                  <li class="bg-amazon-green"><a href="#" class="dropdown-item text-light disabled">Português</a></li>
+                  <li><a href="en.html" class="dropdown-item">English</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        <tr role="button" onclick="setIcon(), setTheme()">
+        <td>
+          <i id="toggle-btn" class="bi bi-brightness-high-fill ms-3 fs-3" id="toggle-btn-mobile"></i>
+        </td>
+        <td>
+            <span class="fs-4">Tema</span><br>
+            <span class="text-gray-store">Alterne entre claro e noturno</span>
+        </td>
+        <td>
+        </td>
+        </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</secction>
 <!-- navbar mobile -->
-	<nav class="border-top border-5 border-purple navbar fixed-bottom d-md-none d-sm-flex bg-light align-items-center justify-content-between text-center" style="z-index: 999;">
+<nav class="border-top border-5 border-purple navbar fixed-bottom d-md-none d-sm-flex bg-light align-items-center justify-content-between text-center" style="z-index: 999;">
 		<ul class="navbar-nav list-group list-group-horizontal container-fluid mx-4 px-1">
 			<li class="nav-item">
-				<a href="#" class="nav-link actived">
+				<a href="../index.html" class="nav-link actived">
 					<i id="house-icon" role="button" class="bi fs-2 d-block bi-house-fill"></i>
 					<span class="text">Início</span>
 				</a>
@@ -157,17 +158,119 @@
 					<span class="text">Sacola</span>
 				</a>
 			</li>
+			
 		</ul>
-	</nav>
-
-<a href="#"><i class="bi bi-chevron-left text-light d-flex justify-content-start position-absolute"></i></a>
-
-<section class="body-section overflow-hidden">
+</nav>
+<!-- promotion rows -->
+<section class="overflow-hidden">
+	<!-- dropdown cards -->
+<div id="coupon-div" class="container-fluid bg-purple d-none d-md-flex justify-content-center align-items-center mt-3">
+	<img src="../img/coupom.svg" height="35">
+	<h6 id="coupom-header" class="mt-2 mx-4 text-light fw-medium py-2" style="font-family: 'Arimo', sans-serif;">
+		Você tem 3 cupons! Aproveite seus descontos
+	</h6>
+	<div>
+		<i id="icon-offcanvas" role="button" class="bi bi-chevron-down text-orange fs-3 me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-coupom" data-bs-dismiss="offcanvas-coupom"
+		aria-controls="offcanvas-coupom">
+		</i>
+	</div>
+</div>
+<div class="offcanvas offcanvas-w offcanvas-bottom overflow-auto" data-bs-scroll="false" data-bs-backdrop="false" tabindex="-1" id="offcanvas-coupom" aria-labelledby="offcanvas-coupomLabel">
+  <div id="offcanvas-coupom-header" class="offcanvas-header bg-purple d-md-none d-sm-block ps-3">
+		<div role="button" style="width: 6vh; height: 6vh;" class="bg-light rounded-circle position-relative" data-bs-dismiss="offcanvas">
+			<i class="bi bi-caret-left-fill fs-1 text-purple position-absolute top-50 start-50 translate-middle"></i>
+		</div>
+	</div>
+  <div class="offcanvas-body">
+    <div class="row container-fluid d-md-flex justify-content-center">
+			<div class="col-md card-body-w mb-3">
+				<div class="card">
+					<div class="card-body">
+						<div class="d-flex justify-content-start align-items-center">
+							<img src="../img/coupom-outline.svg" height="55" class="mx-2">
+							<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
+						</div>
+						<p class="card-text text-start fs-6">Válido para o primeiro pedido em Bebidas acima de R$50</p>
+							<a role="button" href="#" class="container-fluid btn btn-outline-purple fw-semibold">Ver lojas</a>
+						<div class="row mt-2">
+							<a href="#" class="col text-start link-purple fw-semibold text-decoration-none">Ver regras</a>
+							<p class="col text-end text-gray">Válido até 23/06</p>
+						</div>
+					</div>
+					<div class="card-footer text-center">
+						<h6 class="text-gray fs-footer">
+							O cupom será aplicado no pagamento
+						</h6>
+					</div>
+				</div>
+			</div>
+			<div class="col-md card-body-w mb-3">
+				<div class="card">
+					<div class="card-body">
+						<div class="d-flex justify-content-start align-items-center">
+							<img src="../img/coupom-outline.svg" height="55" class="mx-2">
+							<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
+						</div>
+						<p class="card-text text-start fs-6">Válido para o primeiro pedido em Bebidas acima de R$50</p>
+							<a role="button" href="#" class="btn container-fluid btn-outline-purple fw-semibold link">Ver lojas</a>
+						<div class="row mt-2">
+							<a href="#" class="col text-start link-purple fw-semibold text-decoration-none">Ver regras</a>
+							<p class="col text-end text-gray" lang="pt-BR">Válido até 23/06</p>
+						</div>
+					</div>
+					<div class="card-footer text-center">
+						<h6 class="text-gray fs-footer" lang="pt-BR">
+							O cupom será aplicado no pagamento
+						</h6>
+					</div>
+				</div>
+			</div>
+			<div class="col-md card-body-w mb-3">
+				<div class="card">
+					<div class="card-body">
+						<div class="d-flex justify-content-start align-items-center">
+							<img src="../img/coupom-outline.svg" height="55" class="mx-2">
+							<h6 class="card-title"><b>R$20 para Bebidas</b></h6>
+						</div>
+						<p class="card-text text-start fs-6">Válido para o primeiro pedido em Bebidas acima de R$50</p>
+							<a role="button" href="#" class="container-fluid btn btn-outline-purple fw-semibold">Ver lojas</a>
+						<div class="row mt-2">
+							<a href="#" class="col text-start link-purple fw-semibold text-decoration-none">Ver regras</a>
+							<p class="col text-end text-gray">Válido até 23/06</p>
+						</div>
+					</div>
+					<div class="card-footer text-center">
+						<h6 class="text-gray fs-footer">
+							O cupom será aplicado no pagamento
+						</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+</div>
+</section>
+<div class="header">
+  <a href="../index.html"><i class="bi bi-chevron-left text-light d-flex d-lg-none justify-content-start position-absolute fs-2 mt-2"></i></a>
+</div>
+<section class="body-section">
   <div class="d-flex justify-content-center">
-   <img src="../img/handmade-burguer-banner.svg" class="banner">
+    <img src="../img/handmade-burguer-banner.svg" class="banner">
+  </div>
+  <div id="store-page-body" class="container-fluid d-flex p-2">
+    <table>
+      <tr>
+        <td class="d-flex align-items-center">
+          <img src="../img/home-burguer.svg" height="65" class="border border-3 rounded-circle">
+          <h5 class="mx-2 m-0">Handmade Burguer</h5>
+        </td>
+        <td>
+          <span class="bi bi-star-fill text-yellow align-items-center"> 4.5</span>
+        </td>
+      </tr>
+    </table>
   </div>
 </section>
-
 <footer class="border-top overflow-hidden d-none d-md-flex">
 	<div class="container-fluid footer-body">
 			<div class="row gy-4 gx-5">

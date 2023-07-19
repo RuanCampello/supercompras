@@ -61,10 +61,6 @@
 		-webkit-transform: scale(1.02); /* Safari 3-8 */
 		transform: scale(1.02); 
 	}
-	.banner {
-		width: 100%;
-		height: 100%;
-	}
 }
 @media screen and (min-width:992px) {
 	.carousel-inner {
@@ -86,7 +82,12 @@
 		height: 250px;
 		object-fit: cover;
 		margin-block: 45px;
-		border-radius: 7px;
+		border-radius: 4.5px;
+	}
+	.banner {
+		width: 1300px;
+		height: 250px;
+		object-fit: cover;
 	}
 }
 @media screen and (min-width:1200px) {
@@ -107,6 +108,11 @@
 @media screen and (max-width: 992px){
 	.store-body-w {
 		width: 45%;
+	}
+	.banner {
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
 	}
 }
 @media screen and (max-width: 767px){

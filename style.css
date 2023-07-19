@@ -61,6 +61,10 @@
 		-webkit-transform: scale(1.02); /* Safari 3-8 */
 		transform: scale(1.02); 
 	}
+	.banner {
+		width: 100%;
+		height: 100%;
+	}
 }
 @media screen and (min-width:992px) {
 	.carousel-inner {
@@ -76,6 +80,13 @@
 	}
 	.first-item {
 		margin-left: 100px;
+	}
+	.banner {
+		width: 1300px;
+		height: 250px;
+		object-fit: cover;
+		margin-block: 45px;
+		border-radius: 7px;
 	}
 }
 @media screen and (min-width:1200px) {

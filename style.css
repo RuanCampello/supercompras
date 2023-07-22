@@ -4,6 +4,9 @@
   color: var(--bs-white);
   background: var(--bs-purple);
 }
+section {
+	overflow: hidden;
+}
 #coupom-header::selection {
 	color: var(--bs-purple);
 	background: var(--bs-white);

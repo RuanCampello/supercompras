@@ -13,7 +13,7 @@ section {
 	text-overflow: ellipsis;
 }
 .store-dish-w {
-	height: 120px;
+	height: 135px;
 }
 #coupom-header::selection {
 	color: var(--bs-purple);
